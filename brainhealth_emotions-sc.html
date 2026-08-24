@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html class="nojs html css_verticalspacer" lang="zh-HK">
+ <head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="description" content="香港警覺性及記憶篩查 Hong Kong - Vigilance and Memory Test (HK-VMT) 一項簡單而準確的線上認知測試，經過大學以60歲或以上的群組作為參考進行驗證。它以單詞回憶，專注力，及圖像記憶作為評估基礎。 研究已刊登於 國際老年醫學期刊《Aging and mental health》 為全港60歲以上人士提供簡單而準確的認知篩查服務 協助服務機構找出有「輕度認知障礙」的人士促進早期預防 提高大眾對大腦健康管理的意識 推進本地有關 「認知障礙症」 臨床前期的研究"/>
+  <meta name="keywords" content="香港警覺性及記憶篩查,Hong Kong - Vigilance and Memory Test, , HK-VMT, 認知測試, 單詞回憶，專注力, 圖像記憶, 認知篩查, 輕度認知障礙, 認知障礙症, 早期預防, 記憶力減退, 時空混肴, 語言障礙, 日常自理能力下降, 專注力下降, 判斷力受損, 行為和情緒問題, 大腦健康管理"/>
+  <meta name="generator" content="2018.1.1.386"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <script type="text/javascript">
+   // Update the 'nojs'/'js' class on the html node
+document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
+
+// Check that all required assets are uploaded and up-to-date
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "jquery.musepolyfill.bgsize.js", "jquery.musemenu.js", "webpro.js", "musewpdisclosure.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "jquery.museresponsive.js", "require.js", "brainhealth_emotions-sc.css"], "outOfDate":[]};
+</script>
+  
+  <link rel="shortcut icon" href="images/global-sc-favicon.ico?crc=3891198573"/>
+  <title>情绪管理</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=455485524"/>
+  <link rel="stylesheet" type="text/css" href="css/master_global-sc.css?crc=3781360246"/>
+  <link rel="stylesheet" type="text/css" href="css/brainhealth_emotions-sc.css?crc=146142447" id="pagesheet"/>
+  <!-- IE-only CSS -->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/nomq_preview_master_global-sc.css?crc=4072182069"/>
+  <link rel="stylesheet" type="text/css" href="css/nomq_brainhealth_emotions-sc.css?crc=448040359" id="nomq_pagesheet"/>
+  <![endif]-->
+  <!-- JS includes -->
+  <!--[if lt IE 9]>
+  <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
+  <![endif]-->
+    <!--custom head HTML-->
+  <style>
+  body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .height100 {
+    height: 100vh !important;
+    padding: 0 !important;
+  }
+
+  .height85 {
+    height: 85vh !important;
+    padding: 0 !important;
+  }
+
+  .height55 {
+    height: 55vh !important;
+    padding: 0 !important;
+  }
+
+  .pulldown {
+    animation: bounce 2s ease infinite;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .backtotop {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .backtotop.hidden {
+    opacity: 0;
+  }
+
+  .waviy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  }
+
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+  }
+
+  @keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+      transform: translateY(0)
+    }
+
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+  .jumping {
+    animation: bounce 2s ease infinite;
+  }
+
+  .sclangbtn {
+    cursor: pointer;
+  }
+
+  .tclangbtn {
+    cursor: pointer;
+  }
+
+  .englangbtn {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const tcLangBtns = document.querySelectorAll('.tclangbtn');
+
+    tcLangBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentUrl = window.location.href;
+
+        if (currentUrl.includes('-sc.html')) {
+          const newUrl = currentUrl.replace('-sc.html', '.html');
+          window.location.href = newUrl;
+        } else {
+          alert('T Chinese Version Webpage Error');
+        }
+      });
+    });
+
+    const enLangBtns = document.querySelectorAll('.englangbtn');
+
+    enLangBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentUrl = window.location.href;
+
+        if (currentUrl.includes('-sc.html')) {
+          const newUrl = currentUrl.replace('-sc.html', '-en.html');
+          window.location.href = newUrl;
+        } else {
+          alert('English Version Webpage Error');
+        }
+      });
+    });
+
+    const scrolldownBtn = document.querySelector('.pulldown');
+    scrolldownBtn.style.opacity = 1;
+    window.addEventListener('scroll', () => {
+      const opacity = 1 - (window.scrollY / 200);
+      scrolldownBtn.style.opacity = opacity > 0 ? opacity : 0;
+    });
+
+    const backtotopBtn = document.querySelector('.backtotop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backtotopBtn.style.opacity = 1;
+      } else {
+        backtotopBtn.style.opacity = 0;
+      }
+    });
+
+    backtotopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+  });
+
+
+
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+
+</script>
+  <!--HTML Widget code-->
+  
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+		
+
+		
+  <!--/*
+
+*/
+-->
+ </head>
+ <body>
+
+  <div class="breakpoint active" id="bp_infinity" data-min-width="1281"><!-- responsive breakpoint node -->
+   <div class="clearfix" id="page"><!-- group -->
+    <div class="clearfix grpelem shared_content" id="pu822377" data-content-guid="pu822377_content"><!-- column -->
+     <div class="size_fixed colelem shared_content" id="u822377" data-content-guid="u822377_content"><!-- custom html -->
+      
+
+    	
+     </div>
+     <div class="size_fixed colelem shared_content" id="u833771" data-content-guid="u833771_content"><!-- custom html -->
+      
+        <style>
+          html, body {
+            overflow-x: hidden !important;
+          }
+
+          .noFill{
+            background-color: transparent;
+          }
+          .fadein{
+            animation-duration: 0.5s !important;
+          }
+          .animation-direction{
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+          }
+        </style>
+    	
+     </div>
+    </div>
+    <div class="clearfix grpelem" id="ppu833758"><!-- column -->
+     <div class="clearfix colelem shared_content" id="pu833758" data-content-guid="pu833758_content"><!-- group -->
+      <div class="museBGSize grpelem shared_content" id="u833758" data-content-guid="u833758_content"><!-- simple frame --></div>
+      <div class="browser_width grpelem shared_content" id="u833759-bw" data-content-guid="u833759-bw_content">
+       <div id="u833759"><!-- simple frame --></div>
+      </div>
+      <div class="browser_width grpelem shared_content" id="u833763-bw" data-content-guid="u833763-bw_content">
+       <div id="u833763"><!-- simple frame --></div>
+      </div>
+      <div class="browser_width grpelem shared_content" id="u833760-bw" data-content-guid="u833760-bw_content">
+       <div class="rounded-corners" id="u833760"><!-- simple frame --></div>
+      </div>
+      <div class="browser_width grpelem" id="u833762-bw">
+       <div class="museBGSize" id="u833762"><!-- column -->
+        <div class="clearfix" id="u833762_align_to_page">
+         <div class="fadein colelem shared_content" id="u833765" data-content-guid="u833765_content"><!-- simple frame --></div>
+         <div class="colelem shared_content" id="u833761" data-content-guid="u833761_content"><!-- custom html -->
+          <div class="waviy">
+ <span style="--i:1">情</span>
+ <span style="--i:2">绪</span>
+ <span style="--i:3">管</span>
+ <span style="--i:4">理</span>
+</div>
+
+         </div>
+         <div class="fadein colelem shared_content" id="u833756" data-content-guid="u833756_content"><!-- simple frame --></div>
+         <div class="fadein clearfix colelem shared_content" id="u833753-4" data-content-guid="u833753-4_content"><!-- content -->
+          <p id="u833753-2"><span class="body" id="u833753">舒缓焦虑或负面情绪</span></p>
+         </div>
+         <div class="Button fadein clearfix colelem shared_content" id="buttonu833746" data-content-guid="buttonu833746_content"><!-- container box -->
+          <div class="museBGSize grpelem shared_content" id="u833747" data-content-guid="u833747_content"><!-- simple frame --></div>
+         </div>
+         <div class="fadein clearfix colelem shared_content" id="u833705-4" data-content-guid="u833705-4_content"><!-- content -->
+          <p id="u833705-2"><span class="body" id="u833705">舒缓焦虑或负面情绪有助抑制脑内压力荷尔蒙「皮质醇 Cortisol」 的分泌，并改善与压力相关的问题，例如:</span></p>
+         </div>
+         <div class="clearfix colelem" id="pbuttonu833706"><!-- group -->
+          <div class="Button fadein clearfix grpelem" id="buttonu833706"><!-- container box -->
+           <div class="clearfix colelem shared_content" id="u833708" data-content-guid="u833708_content"><!-- group -->
+            <div class="museBGSize grpelem shared_content" id="u833709" data-content-guid="u833709_content"><!-- simple frame --></div>
+           </div>
+           <div class="clearfix colelem shared_content" id="u833707-6" data-content-guid="u833707-6_content"><!-- content -->
+            <p id="u833707-2"><span class="body" id="u833707">改善</span></p>
+            <p id="u833707-4"><span class="body" id="u833707-3">自主神经系统失调</span></p>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem shared_content" id="buttonu833738" data-content-guid="buttonu833738_content"><!-- container box -->
+           <div class="clearfix colelem" id="u833739"><!-- group -->
+            <div class="museBGSize grpelem shared_content" id="u833740" data-content-guid="u833740_content"><!-- simple frame --></div>
+           </div>
+           <div class="clearfix colelem shared_content" id="u833741-4" data-content-guid="u833741-4_content"><!-- content -->
+            <p id="u833741-2"><span class="body" id="u833741">控制血压</span></p>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem shared_content" id="buttonu833742" data-content-guid="buttonu833742_content"><!-- container box -->
+           <div class="clearfix colelem" id="u833743"><!-- group -->
+            <div class="museBGSize grpelem shared_content" id="u833744" data-content-guid="u833744_content"><!-- simple frame --></div>
+           </div>
+           <div class="clearfix colelem shared_content" id="u833745-6" data-content-guid="u833745-6_content"><!-- content -->
+            <p id="u833745-2"><span class="body" id="u833745">提升对</span></p>
+            <p id="u833745-4"><span class="body" id="u833745-3">胰岛素的敏感度</span></p>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem shared_content" id="buttonu833688" data-content-guid="buttonu833688_content"><!-- container box -->
+           <div class="clearfix colelem" id="u833690"><!-- group -->
+            <div class="museBGSize grpelem shared_content" id="u833691" data-content-guid="u833691_content"><!-- simple frame --></div>
+           </div>
+           <div class="clearfix colelem shared_content" id="u833689-4" data-content-guid="u833689-4_content"><!-- content -->
+            <p id="u833689-2"><span class="body" id="u833689">延缓细胞衰老</span></p>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="browser_width grpelem" id="u833764-bw">
+       <div class="museBGSize" id="u833764"><!-- group -->
+        <div class="clearfix" id="u833764_align_to_page">
+         <a class="anchor_item grpelem shared_content" id="cognitiverelax" data-content-guid="cognitiverelax_content"></a>
+         <div class="clearfix grpelem shared_content" id="pu833748" data-content-guid="pu833748_content"><!-- group -->
+          <div class="grpelem shared_content" id="u833748" data-content-guid="u833748_content"><!-- simple frame --></div>
+          <div class="fadein clearfix grpelem shared_content" id="u833686-6" data-content-guid="u833686-6_content"><!-- content -->
+           <ul class="list0 nls-None" id="u833686-4">
+            <li id="u833686-3"><span class="body" id="u833686">大脑释出</span><span class="body" id="u833686-2">「安多芬Endorphin」</span></li>
+           </ul>
+          </div>
+          <div class="clearfix grpelem shared_content" id="u833704-4" data-content-guid="u833704-4_content"><!-- content -->
+           <p id="u833704-2"><span class="body" id="u833704">多做令人放松身心的活动有助</span></p>
+          </div>
+          <div class="Button fadein clearfix grpelem" id="buttonu833715"><!-- container box -->
+           <div class="clearfix grpelem" id="u833716"><!-- group -->
+            <div class="rounded-corners clearfix grpelem" id="u833717"><!-- group -->
+             <div class="museBGSize grpelem shared_content" id="u833718" data-content-guid="u833718_content"><!-- simple frame --></div>
+            </div>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem" id="buttonu833727"><!-- container box -->
+           <div class="clearfix grpelem" id="u833728"><!-- group -->
+            <div class="rounded-corners clearfix grpelem" id="u833730"><!-- group -->
+             <div class="museBGSize grpelem shared_content" id="u833729" data-content-guid="u833729_content"><!-- simple frame --></div>
+            </div>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem" id="buttonu833731"><!-- container box -->
+           <div class="rounded-corners clearfix grpelem" id="u833732"><!-- group -->
+            <div class="museBGSize grpelem shared_content" id="u833733" data-content-guid="u833733_content"><!-- simple frame --></div>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem" id="buttonu833723"><!-- container box -->
+           <div class="clearfix grpelem" id="u833724"><!-- group -->
+            <div class="rounded-corners clearfix grpelem" id="u833725"><!-- group -->
+             <div class="museBGSize grpelem shared_content" id="u833726" data-content-guid="u833726_content"><!-- simple frame --></div>
+            </div>
+           </div>
+          </div>
+          <div class="Button fadein clearfix grpelem" id="buttonu833692"><!-- container box -->
+           <div class="rounded-corners clearfix grpelem" id="u833694"><!-- group -->
+            <div class="museBGSize grpelem shared_content" id="u833693" data-content-guid="u833693_content"><!-- simple frame --></div>
+           </div>
+          </div>
+          <div class="fadein clearfix grpelem shared_content" id="u833698-6" data-content-guid="u833698-6_content"><!-- content -->
+           <ul class="list0 nls-None" id="u833698-4">
+            <li id="u833698-3"><span class="body" id="u833698">调节体内</span><span class="body" id="u833698-2">「血清素Serotonin」</span></li>
+           </ul>
+          </div>
+          <div class="fadein clearfix grpelem shared_content" id="u833687-7" data-content-guid="u833687-7_content"><!-- content -->
+           <ul class="list0 nls-None" id="u833687-5">
+            <li id="u833687-4"><span class="body" id="u833687">压制</span><span class="body" id="u833687-2">促进神经</span><span class="body" id="u833687-3">发炎因子</span></li>
+           </ul>
+          </div>
+          <div class="fadein clearfix grpelem shared_content" id="u833710-6" data-content-guid="u833710-6_content"><!-- content -->
+           <ul class="list0 nls-None" id="u833710-4">
+            <li id="u833710-3"><span class="body" id="u833710">抵抗外在环境压力</span><span class="body" id="u833710-2">对杏仁核及海马体的刺激</span></li>
+           </ul>
+          </div>
+          <div class="fadein clearfix grpelem shared_content" id="u833734-7" data-content-guid="u833734-7_content"><!-- content -->
+           <ul class="list0 nls-None" id="u833734-5">
+            <li id="u833734-4"><span class="body" id="u833734">减低</span><span class="body" id="u833734-2">自主神经系统引发过</span><span class="body" id="u833734-3">过度的情绪反应</span></li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem shared_content" id="buttonu833695" data-content-guid="buttonu833695_content"><!-- container box -->
+      <div class="rounded-corners grpelem shared_content" id="u833697" data-content-guid="u833697_content"><!-- simple frame --></div>
+      <div class="clearfix grpelem shared_content" id="u833696-4" data-content-guid="u833696-4_content"><!-- content -->
+       <p id="u833696-2">放松身心活动基本分类</p>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem shared_content" id="buttonu833719" data-content-guid="buttonu833719_content"><!-- container box -->
+      <div class="museBGSize rounded-corners grpelem shared_content" id="u833720" data-content-guid="u833720_content"><!-- simple frame --></div>
+      <div class="clearfix grpelem" id="pu833721-4"><!-- column -->
+       <div class="clearfix colelem shared_content" id="u833721-4" data-content-guid="u833721-4_content"><!-- content -->
+        <p id="u833721-2"><span class="body" id="u833721">纾压活动</span></p>
+       </div>
+       <div class="clearfix colelem shared_content" id="u833722-13" data-content-guid="u833722-13_content"><!-- content -->
+        <ul class="list0 nls-None" id="u833722-11">
+         <li id="u833722-2"><span class="body shared_content" id="u833722" data-content-guid="u833722_content">呼吸练习</span></li>
+         <li id="u833722-4" class="shared_content" data-content-guid="u833722-4_content"><span id="u833722-3">听音乐</span></li>
+         <li id="u833722-6" class="shared_content" data-content-guid="u833722-6_content"><span id="u833722-5">旅行</span></li>
+         <li id="u833722-8" class="shared_content" data-content-guid="u833722-8_content"><span id="u833722-7">接触大自然</span></li>
+         <li id="u833722-10"><span class="body shared_content" id="u833722-9" data-content-guid="u833722-9_content">点燃香薰、按摩、茗茶/花草茶等</span></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem shared_content" id="buttonu833749" data-content-guid="buttonu833749_content"><!-- container box -->
+      <div class="museBGSize rounded-corners grpelem shared_content" id="u833751" data-content-guid="u833751_content"><!-- simple frame --></div>
+      <div class="clearfix grpelem" id="pu833750-4"><!-- column -->
+       <div class="clearfix colelem shared_content" id="u833750-4" data-content-guid="u833750-4_content"><!-- content -->
+        <p id="u833750-2"><span id="u833750">心灵活动</span></p>
+       </div>
+       <div class="clearfix colelem shared_content" id="u833752-11" data-content-guid="u833752-11_content"><!-- content -->
+        <ul class="list0 nls-None" id="u833752-9">
+         <li id="u833752-2"><span class="body" id="u833752">静观冥想</span></li>
+         <li id="u833752-4"><span class="body" id="u833752-3">艺术活动 (禅绕画)</span></li>
+         <li id="u833752-6"><span class="body" id="u833752-5">写日记</span></li>
+         <li id="u833752-8"><span class="body" id="u833752-7">回顾感恩等</span></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem shared_content" id="buttonu833711" data-content-guid="buttonu833711_content"><!-- container box -->
+      <div class="museBGSize rounded-corners grpelem shared_content" id="u833712" data-content-guid="u833712_content"><!-- simple frame --></div>
+      <div class="clearfix grpelem" id="pu833713-4"><!-- column -->
+       <div class="clearfix colelem shared_content" id="u833713-4" data-content-guid="u833713-4_content"><!-- content -->
+        <p id="u833713-2"><span id="u833713">宗教活动</span></p>
+       </div>
+       <div class="clearfix colelem shared_content" id="u833714-9" data-content-guid="u833714-9_content"><!-- content -->
+        <ul class="list0 nls-None" id="u833714-7">
+         <li id="u833714-2"><span id="u833714">寺庙参拜</span></li>
+         <li id="u833714-4"><span id="u833714-3">教会活动</span></li>
+         <li id="u833714-6"><span id="u833714-5">诵经、祈祷等</span></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem shared_content" id="buttonu833701" data-content-guid="buttonu833701_content"><!-- container box -->
+      <div class="museBGSize rounded-corners grpelem shared_content" id="u833703" data-content-guid="u833703_content"><!-- simple frame --></div>
+      <div class="clearfix grpelem shared_content" id="u833702-6" data-content-guid="u833702-6_content"><!-- content -->
+       <p id="u833702-2"><span class="body" id="u833702">与信任的人倾诉</span></p>
+       <p id="u833702-4"><span class="body" id="u833702-3">减少焦虑</span></p>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem shared_content" id="buttonu833735" data-content-guid="buttonu833735_content"><!-- container box -->
+      <div class="museBGSize rounded-corners grpelem shared_content" id="u833737" data-content-guid="u833737_content"><!-- simple frame --></div>
+      <div class="clearfix grpelem shared_content" id="u833736-7" data-content-guid="u833736-7_content"><!-- content -->
+       <p id="u833736-5"><span class="body" id="u833736-4">出现抑郁症状<br/>应及早求医</span></p>
+      </div>
+     </div>
+     <a class="nonblock nontext Button fadein rounded-corners clearfix colelem shared_content" id="buttonu833699" href="brainhealth_social-sc.html" data-content-guid="buttonu833699_content"><!-- container box --><div class="clearfix grpelem shared_content" id="u833700-4" data-content-guid="u833700-4_content"><!-- content --><p id="u833700-2">下一节 : 社交活动</p></div></a>
+    </div>
+    <div class="clearfix grpelem" id="pu824087"><!-- group -->
+     <div class="backtotop shared_content" id="u824087" data-content-guid="u824087_content"><!-- simple frame --></div>
+     <div id="u824152" class="shared_content" data-content-guid="u824152_content"><!-- simple frame --></div>
+     <nav class="MenuBar clearfix" id="menuu823846"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem" id="u823847"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u823848" href="home-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823850-4"><!-- content --><p id="u823850-2" class="shared_content" data-content-guid="u823850-2_content"><span id="u823850">关于HK-VMT</span></p></div></a>
+       <div class="SubMenu MenuLevel1 clearfix" id="u823852"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem" id="u823853"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem" id="u823854"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823855" href="home-sc.html#intro"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823858-4"><!-- content --><p id="u823858-2" class="shared_content" data-content-guid="u823858-2_content">测试介绍</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823861"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823864" href="home-sc.html#compare"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823865-4"><!-- content --><p id="u823865-2" class="shared_content" data-content-guid="u823865-2_content">测试特性</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823875"><!-- horizontal box --><div class="MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823876"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823878-4"><!-- content --><p id="u823878-2" class="shared_content" data-content-guid="u823878-2_content">成立目的</p></div></div></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823868"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823871" href="home-sc.html#team"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823874-4"><!-- content --><p id="u823874-2" class="shared_content" data-content-guid="u823874-2_content">团队介绍</p></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u823966"><!-- vertical box -->
+       <div class="MenuItem MenuItemWithSubMenu clearfix colelem" id="u824004" title="立即測試"><!-- horizontal box -->
+        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u824007-4"><!-- content -->
+         <p id="u824007-2" class="shared_content" data-content-guid="u824007-2_content"><span id="u824007">立即测试</span></p>
+        </div>
+       </div>
+       <div class="SubMenu MenuLevel1 clearfix" id="u823967"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem" id="u823968"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem" id="u823976"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823977" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_40n3q7cpgomFK98" target="_blank" title="進入平台"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823978-4"><!-- content --><p id="u823978-2" class="shared_content" data-content-guid="u823978-2_content">进入平台</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823990"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823993" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8zVhO5JUQeduI74" target="_blank" title="用戶登記"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823994-4"><!-- content --><p id="u823994-2" class="shared_content" data-content-guid="u823994-2_content">建立帐号</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823983"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823986" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_bdDqF1BGRvpCPci" target="_blank" title="HK-VMT測試"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823989-4"><!-- content --><p id="u823989-2" class="shared_content" data-content-guid="u823989-2_content">HK-VMT测试</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823997"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824000" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_eg4tImyNs7lmPae" target="_blank" title="認知風險小評估"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824003-4"><!-- content --><p id="u824003-2" class="shared_content" data-content-guid="u824003-2_content">认知风险评估</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823969"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823972" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8iaWN5wLZkuPKu2" target="_blank" title="管理平台"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823974-4"><!-- content --><p id="u823974-2" class="shared_content" data-content-guid="u823974-2_content">管理平台</p></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u823931"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u823932" href="mediaactivities-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823934-4"><!-- content --><p id="u823934-2" class="shared_content" data-content-guid="u823934-2_content"><span id="u823934">最新动态</span></p></div></a>
+       <div class="SubMenu MenuLevel1 clearfix" id="u823936"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem" id="u823937"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem" id="u823938"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823939" href="mediaactivities-sc.html#talks"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823940-4"><!-- content --><p id="u823940-2" class="shared_content" data-content-guid="u823940-2_content">公众讲座</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823952"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823953" href="mediaactivities-sc.html#research"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823955-4"><!-- content --><p id="u823955-2" class="shared_content" data-content-guid="u823955-2_content">大学研究</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823945"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823946" href="mediaactivities-sc.html#news"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823948-4"><!-- content --><p id="u823948-2" class="shared_content" data-content-guid="u823948-2_content">媒体报导</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823959"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823962" href="mediaactivities-sc.html#gallery"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823963-4"><!-- content --><p id="u823963-2" class="shared_content" data-content-guid="u823963-2_content">活动相集</p></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u824008"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u824074" href="brainhealth-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824075-4"><!-- content --><p id="u824075-2" class="shared_content" data-content-guid="u824075-2_content"><span id="u824075">大脑健康资讯</span></p></div></a>
+       <div class="SubMenu MenuLevel1 clearfix" id="u824009"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem" id="u824010"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem" id="u824067"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824068" href="stages-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824069-4"><!-- content --><p id="u824069-2" class="shared_content" data-content-guid="u824069-2_content">认知阶段</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u824011"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824012" href="risks-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824013-4"><!-- content --><p id="u824013-2" class="shared_content" data-content-guid="u824013-2_content">高危因素</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u824018"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824019" href="healthtips-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824020-4"><!-- content --><p id="u824020-2" class="shared_content" data-content-guid="u824020-2_content">护脑贴士</p></div></a><div class="SubMenu MenuLevel2 clearfix" id="u824023"><!-- vertical box --><ul class="SubMenuView clearfix colelem" id="u824024"><!-- vertical box --><li class="MenuItemContainer clearfix colelem" id="u824032"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824035" href="brainhealth_exercises.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824036-4"><!-- content --><p id="u824036-2" class="shared_content" data-content-guid="u824036-2_content">体能活动</p></div></a></li><li class="MenuItemContainer clearfix colelem" id="u824025"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824026" href="brainhealth_cognitive.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824029-4"><!-- content --><p id="u824029-2" class="shared_content" data-content-guid="u824029-2_content">认知活动</p></div></a></li><li class="MenuItemContainer clearfix colelem" id="u824039"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824040" href="brainhealth_diet.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824043-4"><!-- content --><p id="u824043-2" class="shared_content" data-content-guid="u824043-2_content">健康饮食</p></div></a></li><li class="MenuItemContainer clearfix colelem" id="u824046"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824047" href="brainhealth_emotions.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824049-4"><!-- content --><p id="u824049-2" class="shared_content" data-content-guid="u824049-2_content">情绪管理</p></div></a></li><li class="MenuItemContainer clearfix colelem" id="u824053"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824054" href="brainhealth_social.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824056-4"><!-- content --><p id="u824056-2" class="shared_content" data-content-guid="u824056-2_content">社交活动</p></div></a></li></ul></div></li>
+         <li class="MenuItemContainer clearfix colelem" id="u824060"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u824061" href="healing-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824063-4"><!-- content --><p id="u824063-2" class="shared_content" data-content-guid="u824063-2_content">治疗方针</p></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u823882"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u823906" href="resources-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823907-4"><!-- content --><p id="u823907-2" class="shared_content" data-content-guid="u823907-2_content"><span id="u823907">社区支援</span></p></div></a>
+       <div class="SubMenu MenuLevel1 clearfix" id="u823883"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem" id="u823884"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem" id="u823899"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823900" href="resources-sc.html#gov"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823902-4"><!-- content --><p id="u823902-2" class="shared_content" data-content-guid="u823902-2_content">政府相关机构</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823892"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823893" href="resources-sc.html#ha"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823895-4"><!-- content --><p id="u823895-2" class="shared_content" data-content-guid="u823895-2_content">医院管理局</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823885"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823886" href="resources-sc.html#otherngo"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823887-4"><!-- content --><p id="u823887-2" class="shared_content" data-content-guid="u823887-2_content">其他本地机构</p></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u823910"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u823927" href="partnership-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823930-4"><!-- content --><p id="u823930-2" class="shared_content" data-content-guid="u823930-2_content"><span id="u823930">协作机构</span></p></div></a>
+       <div class="SubMenu MenuLevel1 clearfix" id="u823911"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem" id="u823912"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem" id="u823920"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823921" href="partnership-sc.html#joinus"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823922-4"><!-- content --><p id="u823922-2" class="shared_content" data-content-guid="u823922-2_content">加入我们</p></div></a></li>
+         <li class="MenuItemContainer clearfix colelem" id="u823913"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem" id="u823914" href="partnership-sc.html#contactus"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u823916-4"><!-- content --><p id="u823916-2" class="shared_content" data-content-guid="u823916-2_content">联络我们</p></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem" id="u824078"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u824079" href="faq-sc.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem" id="u824081-4"><!-- content --><p id="u824081-2" class="shared_content" data-content-guid="u824081-2_content"><span id="u824081">常见问题</span></p></div></a>
+      </div>
+     </nav>
+     <a class="nonblock nontext shared_content" id="u824154" href="home-sc.html" data-content-guid="u824154_content"><!-- simple frame --></a>
+     <div id="u824155" class="shared_content" data-content-guid="u824155_content"><!-- simple frame --></div>
+     <div class="englangbtn clearfix shared_content" id="u824085-4" data-content-guid="u824085-4_content"><!-- content -->
+      <p id="u824085-2">EN</p>
+     </div>
+     <div class="tclangbtn clearfix shared_content" id="u824156-4" data-content-guid="u824156-4_content"><!-- content -->
+      <p id="u824156-2">繁</p>
+     </div>
+     <div class="pulldown shared_content" id="u824158" data-content-guid="u824158_content"><!-- simple frame --></div>
+    </div>
+    <div class="verticalspacer" data-offset-top="5140" data-content-above-spacer="5140" data-content-below-spacer="391"></div>
+    <div class="clearfix grpelem" id="pu833757"><!-- group -->
+     <div class="browser_width grpelem shared_content" id="u833757-bw" data-content-guid="u833757-bw_content">
+      <div id="u833757"><!-- simple frame --></div>
+     </div>
+     <div class="browser_width grpelem" id="u822342-bw">
+      <div id="u822342"><!-- group -->
+       <div class="clearfix" id="u822342_align_to_page">
+        <div class="clearfix grpelem" id="pu822356-4"><!-- column -->
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822356-4" href="home-sc.html" data-content-guid="u822356-4_content"><!-- content --><p id="u822356-2">关于HK-VMT</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822343-4" href="home-sc.html#intro" data-content-guid="u822343-4_content"><!-- content --><p id="u822343-2">测试介绍</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822337-4" href="home-sc.html#compare" data-content-guid="u822337-4_content"><!-- content --><p id="u822337-2">测试特性</p></a>
+         <div class="clearfix colelem shared_content" id="u822361-4" data-content-guid="u822361-4_content"><!-- content -->
+          <p id="u822361-2">成立目的</p>
+         </div>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822340-4" href="home-sc.html#team" data-content-guid="u822340-4_content"><!-- content --><p id="u822340-2">团队介绍</p></a>
+         <div class="clearfix colelem shared_content" id="u822336-4" data-content-guid="u822336-4_content"><!-- content -->
+          <p>© 香港警觉性及记忆筛查 2024</p>
+         </div>
+        </div>
+        <div class="clearfix grpelem" id="pu822363-4"><!-- column -->
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822363-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_40n3q7cpgomFK98" target="_blank" data-content-guid="u822363-4_content"><!-- content --><p id="u822363-2">立即测试</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822353-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8zVhO5JUQeduI74" target="_blank" data-content-guid="u822353-4_content"><!-- content --><p id="u822353-2">建立帐号</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822355-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_bdDqF1BGRvpCPci" target="_blank" data-content-guid="u822355-4_content"><!-- content --><p id="u822355-2">HK-VMT测试</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822344-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_eg4tImyNs7lmPae" target="_blank" data-content-guid="u822344-4_content"><!-- content --><p id="u822344-2">认知风险评估</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822352-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8iaWN5wLZkuPKu2" target="_blank" data-content-guid="u822352-4_content"><!-- content --><p id="u822352-2">管理平台</p></a>
+        </div>
+        <div class="clearfix grpelem shared_content" id="pu822341-4" data-content-guid="pu822341-4_content"><!-- column -->
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822341-4" href="mediaactivities-sc.html" data-content-guid="u822341-4_content"><!-- content --><p id="u822341-2">最新动态</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822338-4" href="mediaactivities-sc.html#talks" data-content-guid="u822338-4_content"><!-- content --><p id="u822338-2">公众讲座</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822365-4" href="mediaactivities-sc.html#research" data-content-guid="u822365-4_content"><!-- content --><p id="u822365-2">大学研究</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822351-4" href="mediaactivities-sc.html#news" data-content-guid="u822351-4_content"><!-- content --><p id="u822351-2">媒体报导</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822348-4" href="mediaactivities-sc.html#gallery" data-content-guid="u822348-4_content"><!-- content --><p id="u822348-2">活动相集</p></a>
+        </div>
+        <div class="clearfix grpelem shared_content" id="pu822364-4" data-content-guid="pu822364-4_content"><!-- column -->
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822364-4" href="brainhealth-sc.html" data-content-guid="u822364-4_content"><!-- content --><p id="u822364-2">大脑健康资讯</p></a>
+         <div class="clearfix colelem" id="pu822349-4"><!-- group -->
+          <a class="nonblock nontext clearfix grpelem shared_content" id="u822349-4" href="stages-sc.html" data-content-guid="u822349-4_content"><!-- content --><p id="u822349-2">认知阶段</p></a>
+          <a class="nonblock nontext clearfix grpelem" id="u822354-4" href="brainhealth_exercises-sc.html"><!-- content --><p id="u822354-2">体能活动</p></a>
+         </div>
+         <div class="clearfix colelem" id="pu822345-4"><!-- group -->
+          <a class="nonblock nontext clearfix grpelem shared_content" id="u822345-4" href="risks-sc.html" data-content-guid="u822345-4_content"><!-- content --><p id="u822345-2">高危因素</p></a>
+          <a class="nonblock nontext clearfix grpelem" id="u822339-4" href="brainhealth_cognitive-sc.html"><!-- content --><p id="u822339-2">认知活动</p></a>
+         </div>
+         <div class="clearfix colelem" id="pu822360-4"><!-- group -->
+          <a class="nonblock nontext clearfix grpelem shared_content" id="u822360-4" href="healthtips-sc.html" data-content-guid="u822360-4_content"><!-- content --><p id="u822360-2">护脑贴士</p></a>
+          <a class="nonblock nontext clearfix grpelem" id="u822357-4" href="brainhealth_diet-sc.html"><!-- content --><p id="u822357-2">健康饮食</p></a>
+         </div>
+         <div class="clearfix colelem" id="pu822369-4"><!-- group -->
+          <a class="nonblock nontext clearfix grpelem shared_content" id="u822369-4" href="healing-sc.html" data-content-guid="u822369-4_content"><!-- content --><p id="u822369-2">治疗方针</p></a>
+          <a class="nonblock nontext MuseLinkActive clearfix grpelem" id="u822347-4" href="brainhealth_emotions-sc.html"><!-- content --><p id="u822347-2">情绪管理</p></a>
+         </div>
+         <a class="nonblock nontext clearfix colelem" id="u822366-4" href="brainhealth_social-sc.html"><!-- content --><p id="u822366-2">社交活动</p></a>
+        </div>
+        <div class="clearfix grpelem shared_content" id="pu822368-4" data-content-guid="pu822368-4_content"><!-- column -->
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822368-4" href="resources-sc.html" data-content-guid="u822368-4_content"><!-- content --><p id="u822368-2">社区支援</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822346-4" href="partnership-sc.html" data-content-guid="u822346-4_content"><!-- content --><p id="u822346-2">协作机构</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822359-4" href="faq-sc.html" data-content-guid="u822359-4_content"><!-- content --><p id="u822359-2">常见问题</p></a>
+         <a class="nonblock nontext clearfix colelem shared_content" id="u822350-4" href="disclaimer-sc.html" data-content-guid="u822350-4_content"><!-- content --><p id="u822350-2">免责声明</p></a>
+        </div>
+        <div class="clearfix grpelem shared_content" id="pu822362" data-content-guid="pu822362_content"><!-- column -->
+         <a class="nonblock nontext colelem shared_content" id="u822362" href="https://www.facebook.com/%E9%A6%99%E6%B8%AF%E8%AD%A6%E8%A6%BA%E6%80%A7%E5%8F%8A%E8%A8%98%E6%86%B6%E7%AF%A9%E6%9F%A5-109626367985008" data-content-guid="u822362_content"><!-- simple frame --></a>
+         <div class="tclangbtn clearfix colelem shared_content" id="u822358-4" data-content-guid="u822358-4_content"><!-- content -->
+          <p id="u822358-2">繁</p>
+         </div>
+         <div class="englangbtn clearfix colelem shared_content" id="u822367-4" data-content-guid="u822367-4_content"><!-- content -->
+          <p>EN</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_1280" data-min-width="1026" data-max-width="1280"><!-- responsive breakpoint node -->
+   <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pu822377_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppu833758"><!-- column -->
+     <span class="clearfix colelem placeholder" data-placeholder-for="pu833758_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833695_content"><!-- placeholder node --></span>
+     <div class="Button fadein clearfix colelem temp_no_id" data-orig-id="buttonu833719"><!-- container box -->
+      <span class="museBGSize rounded-corners grpelem placeholder" data-placeholder-for="u833720_content"><!-- placeholder node --></span>
+      <div class="clearfix grpelem temp_no_id" data-orig-id="pu833721-4"><!-- column -->
+       <span class="clearfix colelem placeholder" data-placeholder-for="u833721-4_content"><!-- placeholder node --></span>
+       <div class="clearfix colelem temp_no_id" data-orig-id="u833722-13"><!-- content -->
+        <ul class="list0 nls-None temp_no_id" data-orig-id="u833722-11">
+         <li class="temp_no_id" data-orig-id="u833722-2"><span class="placeholder" data-placeholder-for="u833722_content"><!-- placeholder node --></span></li>
+         <span class="placeholder" data-placeholder-for="u833722-4_content"><!-- placeholder node --></span>
+         <span class="placeholder" data-placeholder-for="u833722-6_content"><!-- placeholder node --></span>
+         <span class="placeholder" data-placeholder-for="u833722-8_content"><!-- placeholder node --></span>
+         <li class="temp_no_id" data-orig-id="u833722-10"><span class="placeholder" data-placeholder-for="u833722-9_content"><!-- placeholder node --></span></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833749_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833711_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833701_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833735_content"><!-- placeholder node --></span>
+     <span class="nonblock nontext Button fadein rounded-corners clearfix colelem placeholder" data-placeholder-for="buttonu833699_content"><!-- placeholder node --></span>
+    </div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu824087"><!-- group -->
+     <span class="backtotop placeholder" data-placeholder-for="u824087_content"><!-- placeholder node --></span>
+     <span class="placeholder" data-placeholder-for="u824152_content"><!-- placeholder node --></span>
+     <nav class="MenuBar clearfix temp_no_id" data-orig-id="menuu823846"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823847"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="home-sc.html" data-orig-id="u823848"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823850-4"><!-- content --><span class="placeholder" data-placeholder-for="u823850-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823852"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823853"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823854"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="home-sc.html#intro" data-orig-id="u823855"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823858-4"><!-- content --><span class="placeholder" data-placeholder-for="u823858-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823861"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="home-sc.html#compare" data-orig-id="u823864"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823865-4"><!-- content --><span class="placeholder" data-placeholder-for="u823865-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823875"><!-- horizontal box --><div class="MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" data-orig-id="u823876"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823878-4"><!-- content --><span class="placeholder" data-placeholder-for="u823878-2_content"><!-- placeholder node --></span></div></div></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823868"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="home-sc.html#team" data-orig-id="u823871"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823874-4"><!-- content --><span class="placeholder" data-placeholder-for="u823874-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823966"><!-- vertical box -->
+       <div class="MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" title="立即測試" data-orig-id="u824004"><!-- horizontal box -->
+        <div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824007-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u824007-2_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823967"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823968"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823976"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_40n3q7cpgomFK98" target="_blank" title="進入平台" data-orig-id="u823977"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823978-4"><!-- content --><span class="placeholder" data-placeholder-for="u823978-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823990"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8zVhO5JUQeduI74" target="_blank" title="用戶登記" data-orig-id="u823993"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823994-4"><!-- content --><span class="placeholder" data-placeholder-for="u823994-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823983"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_bdDqF1BGRvpCPci" target="_blank" title="HK-VMT測試" data-orig-id="u823986"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823989-4"><!-- content --><span class="placeholder" data-placeholder-for="u823989-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823997"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_eg4tImyNs7lmPae" target="_blank" title="認知風險小評估" data-orig-id="u824000"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824003-4"><!-- content --><span class="placeholder" data-placeholder-for="u824003-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823969"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8iaWN5wLZkuPKu2" target="_blank" title="管理平台" data-orig-id="u823972"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823974-4"><!-- content --><span class="placeholder" data-placeholder-for="u823974-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823931"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="mediaactivities-sc.html" data-orig-id="u823932"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823934-4"><!-- content --><span class="placeholder" data-placeholder-for="u823934-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823936"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823937"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823938"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#talks" data-orig-id="u823939"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823940-4"><!-- content --><span class="placeholder" data-placeholder-for="u823940-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823952"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#research" data-orig-id="u823953"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823955-4"><!-- content --><span class="placeholder" data-placeholder-for="u823955-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823945"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#news" data-orig-id="u823946"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823948-4"><!-- content --><span class="placeholder" data-placeholder-for="u823948-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823959"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#gallery" data-orig-id="u823962"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823963-4"><!-- content --><span class="placeholder" data-placeholder-for="u823963-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u824008"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="brainhealth-sc.html" data-orig-id="u824074"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824075-4"><!-- content --><span class="placeholder" data-placeholder-for="u824075-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u824009"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u824010"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824067"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="stages-sc.html" data-orig-id="u824068"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824069-4"><!-- content --><span class="placeholder" data-placeholder-for="u824069-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824011"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="risks-sc.html" data-orig-id="u824012"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824013-4"><!-- content --><span class="placeholder" data-placeholder-for="u824013-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824018"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="healthtips-sc.html" data-orig-id="u824019"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824020-4"><!-- content --><span class="placeholder" data-placeholder-for="u824020-2_content"><!-- placeholder node --></span></div></a><div class="SubMenu MenuLevel2 clearfix temp_no_id" data-orig-id="u824023"><!-- vertical box --><ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u824024"><!-- vertical box --><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824032"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_exercises.html" data-orig-id="u824035"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824036-4"><!-- content --><span class="placeholder" data-placeholder-for="u824036-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824025"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_cognitive.html" data-orig-id="u824026"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824029-4"><!-- content --><span class="placeholder" data-placeholder-for="u824029-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824039"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_diet.html" data-orig-id="u824040"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824043-4"><!-- content --><span class="placeholder" data-placeholder-for="u824043-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824046"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_emotions.html" data-orig-id="u824047"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824049-4"><!-- content --><span class="placeholder" data-placeholder-for="u824049-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824053"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_social.html" data-orig-id="u824054"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824056-4"><!-- content --><span class="placeholder" data-placeholder-for="u824056-2_content"><!-- placeholder node --></span></div></a></li></ul></div></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824060"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="healing-sc.html" data-orig-id="u824061"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824063-4"><!-- content --><span class="placeholder" data-placeholder-for="u824063-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823882"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="resources-sc.html" data-orig-id="u823906"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823907-4"><!-- content --><span class="placeholder" data-placeholder-for="u823907-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823883"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823884"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823899"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="resources-sc.html#gov" data-orig-id="u823900"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823902-4"><!-- content --><span class="placeholder" data-placeholder-for="u823902-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823892"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="resources-sc.html#ha" data-orig-id="u823893"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823895-4"><!-- content --><span class="placeholder" data-placeholder-for="u823895-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823885"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="resources-sc.html#otherngo" data-orig-id="u823886"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823887-4"><!-- content --><span class="placeholder" data-placeholder-for="u823887-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823910"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="partnership-sc.html" data-orig-id="u823927"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823930-4"><!-- content --><span class="placeholder" data-placeholder-for="u823930-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823911"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823912"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823920"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="partnership-sc.html#joinus" data-orig-id="u823921"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823922-4"><!-- content --><span class="placeholder" data-placeholder-for="u823922-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823913"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="partnership-sc.html#contactus" data-orig-id="u823914"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823916-4"><!-- content --><span class="placeholder" data-placeholder-for="u823916-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u824078"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="faq-sc.html" data-orig-id="u824079"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824081-4"><!-- content --><span class="placeholder" data-placeholder-for="u824081-2_content"><!-- placeholder node --></span></div></a>
+      </div>
+     </nav>
+     <span class="nonblock nontext placeholder" data-placeholder-for="u824154_content"><!-- placeholder node --></span>
+     <span class="placeholder" data-placeholder-for="u824155_content"><!-- placeholder node --></span>
+     <span class="englangbtn clearfix placeholder" data-placeholder-for="u824085-4_content"><!-- placeholder node --></span>
+     <span class="tclangbtn clearfix placeholder" data-placeholder-for="u824156-4_content"><!-- placeholder node --></span>
+     <span class="pulldown placeholder" data-placeholder-for="u824158_content"><!-- placeholder node --></span>
+    </div>
+    <div class="verticalspacer" data-offset-top="5246" data-content-above-spacer="5246" data-content-below-spacer="369"></div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu833757"><!-- group -->
+     <span class="browser_width grpelem placeholder" data-placeholder-for="u833757-bw_content"><!-- placeholder node --></span>
+     <div class="browser_width grpelem temp_no_id" data-orig-id="u822342-bw">
+      <div class="temp_no_id" data-orig-id="u822342"><!-- group -->
+       <div class="clearfix temp_no_id" data-orig-id="u822342_align_to_page">
+        <div class="clearfix grpelem" id="ppu822356-4"><!-- column -->
+         <div class="clearfix colelem temp_no_id" data-orig-id="pu822356-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822356-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822363-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822343-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822343-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822353-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822337-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822337-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822355-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822361-4"><!-- group -->
+          <span class="clearfix grpelem placeholder" data-placeholder-for="u822361-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822344-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822340-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822340-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822352-4_content"><!-- placeholder node --></span>
+         </div>
+         <span class="clearfix colelem placeholder" data-placeholder-for="u822336-4_content"><!-- placeholder node --></span>
+        </div>
+        <span class="clearfix grpelem placeholder" data-placeholder-for="pu822341-4_content"><!-- placeholder node --></span>
+        <span class="clearfix grpelem placeholder" data-placeholder-for="pu822364-4_content"><!-- placeholder node --></span>
+        <span class="clearfix grpelem placeholder" data-placeholder-for="pu822368-4_content"><!-- placeholder node --></span>
+        <span class="clearfix grpelem placeholder" data-placeholder-for="pu822362_content"><!-- placeholder node --></span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_1025" data-min-width="770" data-max-width="1025"><!-- responsive breakpoint node -->
+   <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pu822377_content"><!-- placeholder node --></span>
+    <div class="browser_width" id="u824157-bw">
+     <div id="u824157"><!-- simple frame --></div>
+    </div>
+    <div class="clearfix grpelem" id="pu833765"><!-- column -->
+     <span class="fadein colelem placeholder" data-placeholder-for="u833765_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu833758"><!-- group -->
+      <span class="museBGSize grpelem placeholder" data-placeholder-for="u833758_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u833759-bw_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u833763-bw_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u833760-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833762-bw">
+       <div class="museBGSize temp_no_id" data-orig-id="u833762"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u833762_align_to_page">
+         <span class="colelem placeholder" data-placeholder-for="u833761_content"><!-- placeholder node --></span>
+         <span class="fadein colelem placeholder" data-placeholder-for="u833756_content"><!-- placeholder node --></span>
+         <span class="fadein clearfix colelem placeholder" data-placeholder-for="u833753-4_content"><!-- placeholder node --></span>
+         <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833746_content"><!-- placeholder node --></span>
+         <span class="fadein clearfix colelem placeholder" data-placeholder-for="u833705-4_content"><!-- placeholder node --></span>
+         <div class="clearfix colelem temp_no_id" data-orig-id="pbuttonu833706"><!-- group -->
+          <div class="Button fadein clearfix grpelem temp_no_id" data-orig-id="buttonu833706"><!-- container box -->
+           <div class="position_content" id="buttonu833706_position_content">
+            <span class="clearfix colelem placeholder" data-placeholder-for="u833708_content"><!-- placeholder node --></span>
+            <span class="clearfix colelem placeholder" data-placeholder-for="u833707-6_content"><!-- placeholder node --></span>
+           </div>
+          </div>
+          <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833738_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833764-bw">
+       <div class="museBGSize temp_no_id" data-orig-id="u833764"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u833764_align_to_page">
+         <div class="position_content" id="u833764_position_content">
+          <div class="clearfix colelem" id="pbuttonu833742"><!-- group -->
+           <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833742_content"><!-- placeholder node --></span>
+           <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833688_content"><!-- placeholder node --></span>
+          </div>
+          <span class="clearfix colelem placeholder" data-placeholder-for="pu833748_content"><!-- placeholder node --></span>
+          <span class="anchor_item colelem placeholder" data-placeholder-for="cognitiverelax_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833695_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833719_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833749_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833711_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833701_content"><!-- placeholder node --></span>
+     <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833735_content"><!-- placeholder node --></span>
+     <span class="nonblock nontext Button fadein rounded-corners clearfix colelem placeholder" data-placeholder-for="buttonu833699_content"><!-- placeholder node --></span>
+    </div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu824087"><!-- group -->
+     <span class="backtotop placeholder" data-placeholder-for="u824087_content"><!-- placeholder node --></span>
+     <nav class="MenuBar clearfix temp_no_id" data-orig-id="menuu823846"><!-- horizontal box -->
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823847"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="home-sc.html" data-orig-id="u823848"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823850-4"><!-- content --><span class="placeholder" data-placeholder-for="u823850-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823852"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823853"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823854"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="home-sc.html#intro" data-orig-id="u823855"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823858-4"><!-- content --><span class="placeholder" data-placeholder-for="u823858-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823861"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="home-sc.html#compare" data-orig-id="u823864"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823865-4"><!-- content --><span class="placeholder" data-placeholder-for="u823865-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823875"><!-- horizontal box --><div class="MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" data-orig-id="u823876"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823878-4"><!-- content --><span class="placeholder" data-placeholder-for="u823878-2_content"><!-- placeholder node --></span></div></div></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823868"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="home-sc.html#team" data-orig-id="u823871"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823874-4"><!-- content --><span class="placeholder" data-placeholder-for="u823874-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823966"><!-- vertical box -->
+       <div class="MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" title="立即測試" data-orig-id="u824004"><!-- horizontal box -->
+        <div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824007-4"><!-- content -->
+         <span class="placeholder" data-placeholder-for="u824007-2_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823967"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823968"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823976"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_40n3q7cpgomFK98" target="_blank" title="進入平台" data-orig-id="u823977"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823978-4"><!-- content --><span class="placeholder" data-placeholder-for="u823978-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823990"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8zVhO5JUQeduI74" target="_blank" title="用戶登記" data-orig-id="u823993"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823994-4"><!-- content --><span class="placeholder" data-placeholder-for="u823994-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823983"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_bdDqF1BGRvpCPci" target="_blank" title="HK-VMT測試" data-orig-id="u823986"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823989-4"><!-- content --><span class="placeholder" data-placeholder-for="u823989-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823997"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_eg4tImyNs7lmPae" target="_blank" title="認知風險小評估" data-orig-id="u824000"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824003-4"><!-- content --><span class="placeholder" data-placeholder-for="u824003-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823969"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8iaWN5wLZkuPKu2" target="_blank" title="管理平台" data-orig-id="u823972"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823974-4"><!-- content --><span class="placeholder" data-placeholder-for="u823974-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823931"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="mediaactivities-sc.html" data-orig-id="u823932"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823934-4"><!-- content --><span class="placeholder" data-placeholder-for="u823934-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823936"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823937"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823938"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#talks" data-orig-id="u823939"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823940-4"><!-- content --><span class="placeholder" data-placeholder-for="u823940-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823952"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#research" data-orig-id="u823953"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823955-4"><!-- content --><span class="placeholder" data-placeholder-for="u823955-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823945"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#news" data-orig-id="u823946"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823948-4"><!-- content --><span class="placeholder" data-placeholder-for="u823948-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823959"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="mediaactivities-sc.html#gallery" data-orig-id="u823962"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823963-4"><!-- content --><span class="placeholder" data-placeholder-for="u823963-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u824008"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="brainhealth-sc.html" data-orig-id="u824074"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824075-4"><!-- content --><span class="placeholder" data-placeholder-for="u824075-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u824009"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u824010"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824067"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="stages-sc.html" data-orig-id="u824068"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824069-4"><!-- content --><span class="placeholder" data-placeholder-for="u824069-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824011"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="risks-sc.html" data-orig-id="u824012"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824013-4"><!-- content --><span class="placeholder" data-placeholder-for="u824013-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824018"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="healthtips-sc.html" data-orig-id="u824019"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824020-4"><!-- content --><span class="placeholder" data-placeholder-for="u824020-2_content"><!-- placeholder node --></span></div></a><div class="SubMenu MenuLevel2 clearfix temp_no_id" data-orig-id="u824023"><!-- vertical box --><ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u824024"><!-- vertical box --><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824032"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_exercises.html" data-orig-id="u824035"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824036-4"><!-- content --><span class="placeholder" data-placeholder-for="u824036-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824025"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_cognitive.html" data-orig-id="u824026"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824029-4"><!-- content --><span class="placeholder" data-placeholder-for="u824029-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824039"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_diet.html" data-orig-id="u824040"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824043-4"><!-- content --><span class="placeholder" data-placeholder-for="u824043-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824046"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_emotions.html" data-orig-id="u824047"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824049-4"><!-- content --><span class="placeholder" data-placeholder-for="u824049-2_content"><!-- placeholder node --></span></div></a></li><li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824053"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="brainhealth_social.html" data-orig-id="u824054"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824056-4"><!-- content --><span class="placeholder" data-placeholder-for="u824056-2_content"><!-- placeholder node --></span></div></a></li></ul></div></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u824060"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="healing-sc.html" data-orig-id="u824061"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824063-4"><!-- content --><span class="placeholder" data-placeholder-for="u824063-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823882"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="resources-sc.html" data-orig-id="u823906"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823907-4"><!-- content --><span class="placeholder" data-placeholder-for="u823907-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823883"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823884"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823899"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="resources-sc.html#gov" data-orig-id="u823900"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823902-4"><!-- content --><span class="placeholder" data-placeholder-for="u823902-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823892"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="resources-sc.html#ha" data-orig-id="u823893"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823895-4"><!-- content --><span class="placeholder" data-placeholder-for="u823895-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823885"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="resources-sc.html#otherngo" data-orig-id="u823886"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823887-4"><!-- content --><span class="placeholder" data-placeholder-for="u823887-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u823910"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="partnership-sc.html" data-orig-id="u823927"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823930-4"><!-- content --><span class="placeholder" data-placeholder-for="u823930-2_content"><!-- placeholder node --></span></div></a>
+       <div class="SubMenu MenuLevel1 clearfix temp_no_id" data-orig-id="u823911"><!-- vertical box -->
+        <ul class="SubMenuView clearfix colelem temp_no_id" data-orig-id="u823912"><!-- vertical box -->
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823920"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="partnership-sc.html#joinus" data-orig-id="u823921"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823922-4"><!-- content --><span class="placeholder" data-placeholder-for="u823922-2_content"><!-- placeholder node --></span></div></a></li>
+         <li class="MenuItemContainer clearfix colelem temp_no_id" data-orig-id="u823913"><!-- horizontal box --><a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix grpelem temp_no_id" href="partnership-sc.html#contactus" data-orig-id="u823914"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u823916-4"><!-- content --><span class="placeholder" data-placeholder-for="u823916-2_content"><!-- placeholder node --></span></div></a></li>
+        </ul>
+       </div>
+      </div>
+      <div class="MenuItemContainer clearfix grpelem temp_no_id" data-orig-id="u824078"><!-- vertical box -->
+       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem temp_no_id" href="faq-sc.html" data-orig-id="u824079"><!-- horizontal box --><div class="MenuItemLabel NoWrap clearfix grpelem temp_no_id" data-orig-id="u824081-4"><!-- content --><span class="placeholder" data-placeholder-for="u824081-2_content"><!-- placeholder node --></span></div></a>
+      </div>
+     </nav>
+     <span class="nonblock nontext placeholder" data-placeholder-for="u824154_content"><!-- placeholder node --></span>
+     <span class="englangbtn clearfix placeholder" data-placeholder-for="u824085-4_content"><!-- placeholder node --></span>
+     <span class="tclangbtn clearfix placeholder" data-placeholder-for="u824156-4_content"><!-- placeholder node --></span>
+     <span class="pulldown placeholder" data-placeholder-for="u824158_content"><!-- placeholder node --></span>
+    </div>
+    <div class="verticalspacer" data-offset-top="5030" data-content-above-spacer="5029" data-content-below-spacer="444"></div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu833757"><!-- group -->
+     <span class="browser_width grpelem placeholder" data-placeholder-for="u833757-bw_content"><!-- placeholder node --></span>
+     <div class="browser_width grpelem temp_no_id" data-orig-id="u822342-bw">
+      <div class="temp_no_id" data-orig-id="u822342"><!-- group -->
+       <div class="clearfix temp_no_id" data-orig-id="u822342_align_to_page">
+        <div class="clearfix grpelem temp_no_id" data-orig-id="pu822356-4"><!-- column -->
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822356-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822343-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822337-4_content"><!-- placeholder node --></span>
+         <span class="clearfix colelem placeholder" data-placeholder-for="u822361-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822340-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822368-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix grpelem" id="ppu822363-4"><!-- column -->
+         <div class="clearfix colelem temp_no_id" data-orig-id="pu822363-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822363-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822341-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822353-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822353-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822338-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822355-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822355-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822365-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822344-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822344-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822351-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822352-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822352-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822348-4_content"><!-- placeholder node --></span>
+         </div>
+         <div class="clearfix colelem" id="pu822346-4"><!-- group -->
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822346-4_content"><!-- placeholder node --></span>
+          <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822359-4_content"><!-- placeholder node --></span>
+         </div>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822350-4_content"><!-- placeholder node --></span>
+         <span class="clearfix colelem placeholder" data-placeholder-for="u822336-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix grpelem temp_no_id" data-orig-id="pu822364-4"><!-- column -->
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822364-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822349-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822345-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822360-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822369-4_content"><!-- placeholder node --></span>
+         <div class="clearfix colelem temp_no_id" data-orig-id="pu822362"><!-- group -->
+          <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u822362_content"><!-- placeholder node --></span>
+          <div class="clearfix grpelem" id="pu822358-4"><!-- column -->
+           <span class="tclangbtn clearfix colelem placeholder" data-placeholder-for="u822358-4_content"><!-- placeholder node --></span>
+           <span class="englangbtn clearfix colelem placeholder" data-placeholder-for="u822367-4_content"><!-- placeholder node --></span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_769" data-min-width="577" data-max-width="769"><!-- responsive breakpoint node -->
+   <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pu822377_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem shared_content" id="pu824086" data-content-guid="pu824086_content"><!-- group -->
+     <div class="browser_width" id="u824086-bw">
+      <div id="u824086"><!-- simple frame --></div>
+     </div>
+     <div class="browser_width" id="u824153-bw">
+      <div id="u824153"><!-- simple frame --></div>
+     </div>
+    </div>
+    <div class="clearfix grpelem" id="ppamphletu824088"><!-- column -->
+     <div class="PamphletWidget clearfix widget_invisible colelem" id="pamphletu824088" data-islightbox="true"><!-- none box -->
+      <div class="popup_anchor" id="u824091popup" data-lightbox="true">
+       <div class="ContainerGroup clearfix" id="u824091"><!-- stack box -->
+        <div class="Container invi clearfix grpelem" id="u824092"><!-- group -->
+         <ul class="AccordionWidget clearfix grpelem" id="accordionu824093"><!-- vertical box -->
+          <li class="AccordionPanel clearfix colelem" id="u824125"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824131-6"><!-- content --><div class="noticeboard shared_content" id="u824131-5" data-content-guid="u824131-5_content"><p id="u824131-4"><span><a class="nonblock" href="home-sc.html"><span id="u824131">关于HK-VMT</span></a></span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824126"><!-- column --><a class="nonblock nontext clearfix colelem shared_content" id="u824129-4" href="home-sc.html#intro" data-content-guid="u824129-4_content"><!-- content --><div id="u824129-3"><p id="u824129-2">测试介绍</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824128-4" href="home-sc.html#compare" data-content-guid="u824128-4_content"><!-- content --><div id="u824128-3"><p id="u824128-2">测试特性</p></div></a><div class="clearfix colelem shared_content" id="u824127-4" data-content-guid="u824127-4_content"><!-- content --><div id="u824127-3"><p id="u824127-2">成立目的</p></div></div><a class="nonblock nontext clearfix colelem shared_content" id="u824130-4" href="home-sc.html#team" data-content-guid="u824130-4_content"><!-- content --><div id="u824130-3"><p id="u824130-2">团队介绍</p></div></a></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824111"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824112-4"><!-- content --><div class="noticeboard shared_content" id="u824112-3" data-content-guid="u824112-3_content"><p id="u824112-2"><span id="u824112">立即测试</span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824113"><!-- column --><a class="nonblock nontext clearfix colelem shared_content" id="u824118-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_40n3q7cpgomFK98" target="_blank" data-content-guid="u824118-4_content"><!-- content --><div id="u824118-3"><p id="u824118-2">进入平台</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824116-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8zVhO5JUQeduI74" target="_blank" data-content-guid="u824116-4_content"><!-- content --><div id="u824116-3"><p id="u824116-2">建立帐号</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824114-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_bdDqF1BGRvpCPci" target="_blank" data-content-guid="u824114-4_content"><!-- content --><div id="u824114-3"><p id="u824114-2">HK-VMT测试</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824115-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_eg4tImyNs7lmPae" target="_blank" data-content-guid="u824115-4_content"><!-- content --><div id="u824115-3"><p id="u824115-2">认知风险评估</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824117-4" href="https://hkbuchtl.qualtrics.com/jfe/form/SV_8iaWN5wLZkuPKu2" target="_blank" data-content-guid="u824117-4_content"><!-- content --><div id="u824117-3"><p id="u824117-2">管理平台</p></div></a></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824132"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824138-4"><!-- content --><div class="noticeboard shared_content" id="u824138-3" data-content-guid="u824138-3_content"><p id="u824138-2"><span id="u824138">最新动态</span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824133"><!-- column --><a class="nonblock nontext clearfix colelem shared_content" id="u824136-4" href="mediaactivities-sc.html#talks" data-content-guid="u824136-4_content"><!-- content --><div id="u824136-3"><p id="u824136-2">公众讲座</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824135-4" href="mediaactivities-sc.html#research" data-content-guid="u824135-4_content"><!-- content --><div id="u824135-3"><p id="u824135-2">大学研究</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824137-4" href="mediaactivities-sc.html#news" data-content-guid="u824137-4_content"><!-- content --><div id="u824137-3"><p id="u824137-2">媒体报导</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824134-4" href="mediaactivities-sc.html#gallery" data-content-guid="u824134-4_content"><!-- content --><div id="u824134-3"><p id="u824134-2">活动相集</p></div></a></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824099"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824110-6"><!-- content --><div class="noticeboard shared_content" id="u824110-5" data-content-guid="u824110-5_content"><p id="u824110-4"><span><a class="nonblock" href="brainhealth-sc.html"><span id="u824110">大脑健康资讯</span></a></span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824100"><!-- column --><a class="nonblock nontext clearfix colelem shared_content" id="u824104-4" href="stages-sc.html" data-content-guid="u824104-4_content"><!-- content --><div id="u824104-3"><p id="u824104-2">认知阶段</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824105-4" href="risks-sc.html" data-content-guid="u824105-4_content"><!-- content --><div id="u824105-3"><p id="u824105-2">高危因素</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824106-4" href="healthtips-sc.html" data-content-guid="u824106-4_content"><!-- content --><div id="u824106-3"><p id="u824106-2">护脑贴士</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824108-4" href="brainhealth_exercises-sc.html" data-content-guid="u824108-4_content"><!-- content --><div id="u824108-3"><p id="u824108-2">体能活动</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824103-4" href="brainhealth_cognitive-sc.html" data-content-guid="u824103-4_content"><!-- content --><div id="u824103-3"><p id="u824103-2">认知活动</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824107-4" href="brainhealth_diet-sc.html" data-content-guid="u824107-4_content"><!-- content --><div id="u824107-3"><p id="u824107-2">健康饮食</p></div></a><a class="nonblock nontext MuseLinkActive clearfix colelem shared_content" id="u824102-4" href="brainhealth_emotions-sc.html" data-content-guid="u824102-4_content"><!-- content --><div id="u824102-3"><p id="u824102-2">情绪管理</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824101-4" href="brainhealth_social-sc.html" data-content-guid="u824101-4_content"><!-- content --><div id="u824101-3"><p id="u824101-2">社交活动</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824109-4" href="healing-sc.html" data-content-guid="u824109-4_content"><!-- content --><div id="u824109-3"><p id="u824109-2">治疗方针</p></div></a></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824119"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824124-4"><!-- content --><div class="noticeboard shared_content" id="u824124-3" data-content-guid="u824124-3_content"><p id="u824124-2"><span id="u824124">社区支援</span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824120"><!-- column --><a class="nonblock nontext clearfix colelem shared_content" id="u824122-4" href="resources-sc.html#gov" data-content-guid="u824122-4_content"><!-- content --><div id="u824122-3"><p id="u824122-2">政府相关机构</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824121-4" href="resources-sc.html#ha" data-content-guid="u824121-4_content"><!-- content --><div id="u824121-3"><p id="u824121-2">医院管理局</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824123-4" href="resources-sc.html#otherngo" data-content-guid="u824123-4_content"><!-- content --><div id="u824123-3"><p id="u824123-2">其他本地机构</p></div></a></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824144"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824145-4"><!-- content --><div class="noticeboard shared_content" id="u824145-3" data-content-guid="u824145-3_content"><p id="u824145-2"><span id="u824145">协作机构</span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824146"><!-- column --><a class="nonblock nontext clearfix colelem shared_content" id="u824147-4" href="partnership-sc.html#joinus" data-content-guid="u824147-4_content"><!-- content --><div id="u824147-3"><p id="u824147-2">加入我们</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824148-4" href="partnership-sc.html#contactus" data-content-guid="u824148-4_content"><!-- content --><div id="u824148-3"><p id="u824148-2">联络我们</p></div></a></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824094"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824095-4"><!-- content --><div class="noticeboard shared_content" id="u824095-3" data-content-guid="u824095-3_content"><p id="u824095-2"><span id="u824095">常见问题</span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824096"><!-- column --><div class="position_content" id="u824096_position_content"><a class="nonblock nontext clearfix colelem shared_content" id="u824098-4" href="faq-sc.html" data-content-guid="u824098-4_content"><!-- content --><div id="u824098-3"><p id="u824098-2">常见问题</p></div></a><a class="nonblock nontext clearfix colelem shared_content" id="u824097-4" href="disclaimer-sc.html" data-content-guid="u824097-4_content"><!-- content --><div id="u824097-3"><p id="u824097-2">免责声明</p></div></a></div></div></li>
+          <li class="AccordionPanel clearfix colelem" id="u824139"><!-- vertical box --><div class="AccordionPanelTab clearfix colelem" id="u824140-4"><!-- content --><div class="noticeboard shared_content" id="u824140-3" data-content-guid="u824140-3_content"><p id="u824140-2"><span id="u824140">语言 Language</span></p></div></div><div class="AccordionPanelContent disn clearfix colelem" id="u824141"><!-- column --><div class="position_content" id="u824141_position_content"><div class="tclangbtn clearfix colelem shared_content" id="u824143-4" data-content-guid="u824143-4_content"><!-- content --><div id="u824143-3"><p id="u824143-2">繁體中文</p></div></div><div class="englangbtn clearfix colelem shared_content" id="u824142-4" data-content-guid="u824142-4_content"><!-- content --><div id="u824142-3"><p id="u824142-2">English</p></div></div></div></div></li>
+         </ul>
+        </div>
+       </div>
+      </div>
+      <div class="ThumbGroup clearfix grpelem" id="u824150"><!-- none box -->
+       <div class="popup_anchor" id="u824151popup">
+        <div class="Thumb popup_element" id="u824151"><!-- simple frame --></div>
+       </div>
+      </div>
+      <div class="popup_anchor" id="u824089popup">
+       <div class="PamphletCloseButton PamphletLightboxPart popup_element" id="u824089"><!-- simple frame --></div>
+      </div>
+     </div>
+     <span class="fadein colelem placeholder" data-placeholder-for="u833765_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu833758"><!-- group -->
+      <span class="museBGSize grpelem placeholder" data-placeholder-for="u833758_content"><!-- placeholder node --></span>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u833759-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833763-bw">
+       <div class="temp_no_id" data-orig-id="u833763"><!-- group -->
+        <div class="clearfix" id="u833763_align_to_page">
+         <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833695_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+      </div>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u833760-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833762-bw">
+       <div class="museBGSize temp_no_id" data-orig-id="u833762"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u833762_align_to_page">
+         <span class="colelem placeholder" data-placeholder-for="u833761_content"><!-- placeholder node --></span>
+         <span class="fadein colelem placeholder" data-placeholder-for="u833756_content"><!-- placeholder node --></span>
+         <span class="fadein clearfix colelem placeholder" data-placeholder-for="u833753-4_content"><!-- placeholder node --></span>
+         <span class="Button fadein clearfix colelem placeholder" data-placeholder-for="buttonu833746_content"><!-- placeholder node --></span>
+         <span class="fadein clearfix colelem placeholder" data-placeholder-for="u833705-4_content"><!-- placeholder node --></span>
+         <div class="clearfix colelem temp_no_id" data-orig-id="pbuttonu833706"><!-- group -->
+          <div class="Button fadein clearfix grpelem temp_no_id" data-orig-id="buttonu833706"><!-- container box -->
+           <div class="position_content temp_no_id" data-orig-id="buttonu833706_position_content">
+            <span class="clearfix colelem placeholder" data-placeholder-for="u833708_content"><!-- placeholder node --></span>
+            <span class="clearfix colelem placeholder" data-placeholder-for="u833707-6_content"><!-- placeholder node --></span>
+           </div>
+          </div>
+          <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833738_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833764-bw">
+       <div class="museBGSize temp_no_id" data-orig-id="u833764"><!-- group -->
+        <div class="clearfix temp_no_id" data-orig-id="u833764_align_to_page">
+         <span class="anchor_item grpelem placeholder" data-placeholder-for="cognitiverelax_content"><!-- placeholder node --></span>
+         <div class="clearfix grpelem" id="ppbuttonu833742"><!-- column -->
+          <div class="clearfix colelem temp_no_id" data-orig-id="pbuttonu833742"><!-- group -->
+           <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833742_content"><!-- placeholder node --></span>
+           <span class="Button fadein clearfix grpelem placeholder" data-placeholder-for="buttonu833688_content"><!-- placeholder node --></span>
+          </div>
+          <span class="clearfix colelem placeholder" data-placeholder-for="pu833748_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-orig-id="buttonu833719"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833720_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833721-4_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833722-13_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-orig-id="buttonu833749"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833751_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833750-4_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833752-11_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-orig-id="buttonu833711"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833712_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833713-4_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833714-9_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-orig-id="buttonu833701"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833703_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833702-6_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-orig-id="buttonu833735"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833737_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833736-7_content"><!-- placeholder node --></span>
+     </div>
+     <span class="nonblock nontext Button fadein rounded-corners clearfix colelem placeholder" data-placeholder-for="buttonu833699_content"><!-- placeholder node --></span>
+    </div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu824087"><!-- group -->
+     <span class="backtotop placeholder" data-placeholder-for="u824087_content"><!-- placeholder node --></span>
+     <span class="nonblock nontext placeholder" data-placeholder-for="u824154_content"><!-- placeholder node --></span>
+     <span class="pulldown placeholder" data-placeholder-for="u824158_content"><!-- placeholder node --></span>
+    </div>
+    <div class="verticalspacer" data-offset-top="5538" data-content-above-spacer="5537" data-content-below-spacer="365"></div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu833757"><!-- group -->
+     <span class="browser_width grpelem placeholder" data-placeholder-for="u833757-bw_content"><!-- placeholder node --></span>
+     <div class="browser_width grpelem temp_no_id" data-orig-id="u822342-bw">
+      <div class="temp_no_id" data-orig-id="u822342"><!-- group -->
+       <div class="clearfix temp_no_id" data-orig-id="u822342_align_to_page">
+        <div class="clearfix grpelem temp_no_id" data-orig-id="pu822356-4"><!-- column -->
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822356-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822364-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822346-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix grpelem temp_no_id" data-orig-id="pu822363-4"><!-- column -->
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822363-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822360-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822359-4_content"><!-- placeholder node --></span>
+         <div class="clearfix colelem temp_no_id" data-orig-id="pu822362"><!-- group -->
+          <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u822362_content"><!-- placeholder node --></span>
+          <span class="tclangbtn clearfix grpelem placeholder" data-placeholder-for="u822358-4_content"><!-- placeholder node --></span>
+          <span class="englangbtn clearfix grpelem placeholder" data-placeholder-for="u822367-4_content"><!-- placeholder node --></span>
+         </div>
+         <span class="clearfix colelem placeholder" data-placeholder-for="u822336-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix grpelem temp_no_id" data-orig-id="pu822341-4"><!-- column -->
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822341-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822368-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u822350-4_content"><!-- placeholder node --></span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="breakpoint" id="bp_576" data-max-width="576"><!-- responsive breakpoint node -->
+   <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu822377"><!-- column -->
+     <span class="size_fixed colelem placeholder" data-placeholder-for="u822377_content"><!-- placeholder node --></span>
+     <span class="size_fixed colelem placeholder" data-placeholder-for="u833771_content"><!-- placeholder node --></span>
+    </div>
+    <span class="clearfix grpelem placeholder" data-placeholder-for="pu824086_content"><!-- placeholder node --></span>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="ppamphletu824088"><!-- column -->
+     <div class="PamphletWidget clearfix allow_click_through widget_invisible colelem temp_no_id" data-visibility="changed" style="visibility:hidden" data-islightbox="true" data-orig-id="pamphletu824088"><!-- none box -->
+      <div class="clearfix" id="pu824091"><!-- group -->
+       <div class="popup_anchor allow_click_through grpelem temp_no_id" data-col-pos="0" data-lightbox="true" data-orig-id="u824091popup">
+        <div class="ContainerGroup clearfix temp_no_id" data-col-pos="0" data-orig-id="u824091"><!-- stack box -->
+         <div class="Container invi clearfix grpelem temp_no_id" data-col-pos="0" data-orig-id="u824092"><!-- group -->
+          <ul class="AccordionWidget clearfix grpelem temp_no_id" data-visibility="changed" style="visibility:hidden" data-orig-id="accordionu824093"><!-- vertical box -->
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824125"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824131-6"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824131-5_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824126"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824129-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824128-4_content"><!-- placeholder node --></span><span class="clearfix colelem placeholder" data-placeholder-for="u824127-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824130-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824111"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824112-4"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824112-3_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824113"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824118-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824116-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824114-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824115-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824117-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824132"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824138-4"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824138-3_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824133"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824136-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824135-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824137-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824134-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824099"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824110-6"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824110-5_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824100"><!-- group --><div class="clearfix grpelem" id="pu824104-4"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824104-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824105-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824106-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824108-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824103-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824107-4_content"><!-- placeholder node --></span><span class="nonblock nontext MuseLinkActive clearfix colelem placeholder" data-placeholder-for="u824102-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824101-4_content"><!-- placeholder node --></span></div><span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u824109-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824119"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824124-4"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824124-3_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824120"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824122-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824121-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824123-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824144"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824145-4"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824145-3_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824146"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824147-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824148-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824094"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824095-4"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824095-3_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824096"><!-- column --><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824098-4_content"><!-- placeholder node --></span><span class="nonblock nontext clearfix colelem placeholder" data-placeholder-for="u824097-4_content"><!-- placeholder node --></span></div></li>
+           <li class="AccordionPanel clearfix colelem temp_no_id" data-orig-id="u824139"><!-- vertical box --><div class="AccordionPanelTab borderbox clearfix colelem temp_no_id" data-orig-id="u824140-4"><!-- content --><span class="noticeboard placeholder" data-placeholder-for="u824140-3_content"><!-- placeholder node --></span></div><div class="AccordionPanelContent disn clearfix colelem temp_no_id" data-orig-id="u824141"><!-- group --><span class="tclangbtn clearfix grpelem placeholder" data-placeholder-for="u824143-4_content"><!-- placeholder node --></span><span class="englangbtn clearfix grpelem placeholder" data-placeholder-for="u824142-4_content"><!-- placeholder node --></span></div></li>
+          </ul>
+         </div>
+        </div>
+       </div>
+       <div class="popup_anchor allow_click_through temp_no_id" data-col-pos="4" data-orig-id="u824089popup">
+        <div class="PamphletCloseButton PamphletLightboxPart popup_element temp_no_id" data-col-pos="4" data-orig-id="u824089"><!-- simple frame --></div>
+       </div>
+      </div>
+      <div class="ThumbGroup clearfix grpelem temp_no_id" data-col-pos="1" data-sizePolicy="fluidWidth" data-pintopage="page_fixedLeft" data-orig-id="u824150"><!-- none box -->
+       <div class="popup_anchor allow_click_through temp_no_id" data-col-pos="0" data-orig-id="u824151popup">
+        <div class="Thumb popup_element temp_no_id" data-col-pos="0" data-orig-id="u824151"><!-- simple frame --></div>
+       </div>
+      </div>
+     </div>
+     <span class="fadein colelem placeholder" data-placeholder-for="u833765_content"><!-- placeholder node --></span>
+     <span class="colelem placeholder" data-placeholder-for="u833761_content"><!-- placeholder node --></span>
+     <span class="fadein colelem placeholder" data-placeholder-for="u833756_content"><!-- placeholder node --></span>
+     <span class="fadein clearfix colelem placeholder" data-placeholder-for="u833753-4_content"><!-- placeholder node --></span>
+     <div class="clearfix colelem temp_no_id" data-orig-id="pu833758"><!-- group -->
+      <span class="museBGSize grpelem placeholder" data-placeholder-for="u833758_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833759-bw">
+       <div class="temp_no_id" data-orig-id="u833759"><!-- column -->
+        <div class="clearfix" id="u833759_align_to_page">
+         <span class="fadein clearfix colelem placeholder" data-placeholder-for="u833705-4_content"><!-- placeholder node --></span>
+         <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833706"><!-- container box -->
+          <div class="clearfix colelem temp_no_id" data-orig-id="u833708"><!-- group -->
+           <span class="museBGSize grpelem placeholder" data-placeholder-for="u833709_content"><!-- placeholder node --></span>
+          </div>
+          <span class="clearfix colelem placeholder" data-placeholder-for="u833707-6_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833763-bw">
+       <div class="temp_no_id" data-orig-id="u833763"><!-- group -->
+        <div class="clearfix temp_no_id" data-orig-id="u833763_align_to_page">
+         <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833695"><!-- container box -->
+          <span class="rounded-corners grpelem placeholder" data-placeholder-for="u833697_content"><!-- placeholder node --></span>
+          <span class="clearfix grpelem placeholder" data-placeholder-for="u833696-4_content"><!-- placeholder node --></span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="browser_width grpelem placeholder" data-placeholder-for="u833760-bw_content"><!-- placeholder node --></span>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833762-bw">
+       <div class="museBGSize temp_no_id" data-orig-id="u833762"><!-- column -->
+        <div class="clearfix temp_no_id" data-orig-id="u833762_align_to_page">
+         <div class="position_content" id="u833762_position_content">
+          <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833738"><!-- container box -->
+           <div class="clearfix colelem temp_no_id" data-orig-id="u833739"><!-- group -->
+            <span class="museBGSize grpelem placeholder" data-placeholder-for="u833740_content"><!-- placeholder node --></span>
+           </div>
+           <span class="clearfix colelem placeholder" data-placeholder-for="u833741-4_content"><!-- placeholder node --></span>
+          </div>
+          <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833742"><!-- container box -->
+           <div class="clearfix colelem temp_no_id" data-orig-id="u833743"><!-- group -->
+            <span class="museBGSize grpelem placeholder" data-placeholder-for="u833744_content"><!-- placeholder node --></span>
+           </div>
+           <span class="clearfix colelem placeholder" data-placeholder-for="u833745-6_content"><!-- placeholder node --></span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="browser_width grpelem temp_no_id" data-orig-id="u833764-bw">
+       <div class="museBGSize temp_no_id" data-orig-id="u833764"><!-- group -->
+        <div class="clearfix temp_no_id" data-orig-id="u833764_align_to_page">
+         <span class="anchor_item grpelem placeholder" data-placeholder-for="cognitiverelax_content"><!-- placeholder node --></span>
+         <div class="clearfix grpelem" id="pbuttonu833688"><!-- column -->
+          <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833688"><!-- container box -->
+           <div class="clearfix colelem temp_no_id" data-orig-id="u833690"><!-- group -->
+            <span class="museBGSize grpelem placeholder" data-placeholder-for="u833691_content"><!-- placeholder node --></span>
+           </div>
+           <span class="clearfix colelem placeholder" data-placeholder-for="u833689-4_content"><!-- placeholder node --></span>
+          </div>
+          <div class="clearfix colelem temp_no_id" data-orig-id="pu833748"><!-- group -->
+           <span class="grpelem placeholder" data-placeholder-for="u833748_content"><!-- placeholder node --></span>
+           <span class="fadein clearfix grpelem placeholder" data-placeholder-for="u833686-6_content"><!-- placeholder node --></span>
+           <span class="clearfix grpelem placeholder" data-placeholder-for="u833704-4_content"><!-- placeholder node --></span>
+           <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833715"><!-- container box -->
+            <div class="clearfix grpelem temp_no_id" data-orig-id="u833716"><!-- group -->
+             <div class="rounded-corners clearfix grpelem temp_no_id" data-orig-id="u833717"><!-- group -->
+              <span class="museBGSize grpelem placeholder" data-placeholder-for="u833718_content"><!-- placeholder node --></span>
+             </div>
+            </div>
+           </div>
+           <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833727"><!-- container box -->
+            <div class="clearfix grpelem temp_no_id" data-orig-id="u833728"><!-- group -->
+             <div class="rounded-corners clearfix grpelem temp_no_id" data-orig-id="u833730"><!-- group -->
+              <span class="museBGSize grpelem placeholder" data-placeholder-for="u833729_content"><!-- placeholder node --></span>
+             </div>
+            </div>
+           </div>
+           <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833731"><!-- container box -->
+            <div class="rounded-corners clearfix grpelem temp_no_id" data-orig-id="u833732"><!-- group -->
+             <span class="museBGSize grpelem placeholder" data-placeholder-for="u833733_content"><!-- placeholder node --></span>
+            </div>
+           </div>
+           <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833723"><!-- container box -->
+            <div class="clearfix grpelem temp_no_id" data-orig-id="u833724"><!-- group -->
+             <div class="rounded-corners clearfix grpelem temp_no_id" data-orig-id="u833725"><!-- group -->
+              <span class="museBGSize grpelem placeholder" data-placeholder-for="u833726_content"><!-- placeholder node --></span>
+             </div>
+            </div>
+           </div>
+           <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833692"><!-- container box -->
+            <div class="rounded-corners clearfix grpelem temp_no_id" data-orig-id="u833694"><!-- group -->
+             <span class="museBGSize grpelem placeholder" data-placeholder-for="u833693_content"><!-- placeholder node --></span>
+            </div>
+           </div>
+           <span class="fadein clearfix grpelem placeholder" data-placeholder-for="u833698-6_content"><!-- placeholder node --></span>
+           <span class="fadein clearfix grpelem placeholder" data-placeholder-for="u833687-7_content"><!-- placeholder node --></span>
+           <span class="fadein clearfix grpelem placeholder" data-placeholder-for="u833710-6_content"><!-- placeholder node --></span>
+           <span class="fadein clearfix grpelem placeholder" data-placeholder-for="u833734-7_content"><!-- placeholder node --></span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="Button fadein clearfix grpelem temp_no_id" data-visibility="changed" style="visibility:hidden" data-sizePolicy="fluidWidth" data-pintopage="page_fixedCenter" data-orig-id="buttonu833746"><!-- container box -->
+       <span class="museBGSize grpelem placeholder" data-placeholder-for="u833747_content"><!-- placeholder node --></span>
+      </div>
+      <div class="Button fadein clearfix grpelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833719"><!-- container box -->
+       <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833720_content"><!-- placeholder node --></span>
+       <span class="clearfix colelem placeholder" data-placeholder-for="u833721-4_content"><!-- placeholder node --></span>
+       <span class="clearfix colelem placeholder" data-placeholder-for="u833722-13_content"><!-- placeholder node --></span>
+      </div>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833749"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833751_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833750-4_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833752-11_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833711"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833712_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833713-4_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833714-9_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833701"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833703_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833702-6_content"><!-- placeholder node --></span>
+     </div>
+     <div class="Button fadein clearfix colelem temp_no_id" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833735"><!-- container box -->
+      <span class="museBGSize rounded-corners colelem placeholder" data-placeholder-for="u833737_content"><!-- placeholder node --></span>
+      <span class="clearfix colelem placeholder" data-placeholder-for="u833736-7_content"><!-- placeholder node --></span>
+     </div>
+     <a class="nonblock nontext Button fadein rounded-corners clearfix colelem temp_no_id" href="brainhealth_social-sc.html" data-sizePolicy="fixed" data-pintopage="page_fixedCenter" data-orig-id="buttonu833699"><!-- container box --><span class="clearfix grpelem placeholder" data-placeholder-for="u833700-4_content"><!-- placeholder node --></span></a>
+    </div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu824087"><!-- group -->
+     <span class="backtotop placeholder" data-placeholder-for="u824087_content"><!-- placeholder node --></span>
+     <span class="nonblock nontext placeholder" data-placeholder-for="u824154_content"><!-- placeholder node --></span>
+     <span class="pulldown placeholder" data-placeholder-for="u824158_content"><!-- placeholder node --></span>
+    </div>
+    <div class="verticalspacer" data-offset-top="5981" data-content-above-spacer="5980" data-content-below-spacer="431" data-sizePolicy="fixed" data-pintopage="page_fixedLeft"></div>
+    <div class="clearfix grpelem temp_no_id" data-orig-id="pu833757"><!-- group -->
+     <span class="browser_width grpelem placeholder" data-placeholder-for="u833757-bw_content"><!-- placeholder node --></span>
+     <div class="browser_width grpelem temp_no_id" data-orig-id="u822342-bw">
+      <div class="temp_no_id" data-orig-id="u822342"><!-- column -->
+       <div class="clearfix temp_no_id" data-orig-id="u822342_align_to_page">
+        <div class="clearfix colelem temp_no_id" data-orig-id="pu822356-4"><!-- group -->
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822356-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822363-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix colelem temp_no_id" data-orig-id="pu822341-4"><!-- group -->
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822341-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822364-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix colelem temp_no_id" data-orig-id="pu822368-4"><!-- group -->
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822368-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822360-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix colelem temp_no_id" data-orig-id="pu822346-4"><!-- group -->
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822346-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822359-4_content"><!-- placeholder node --></span>
+         <span class="nonblock nontext clearfix grpelem placeholder" data-placeholder-for="u822350-4_content"><!-- placeholder node --></span>
+        </div>
+        <div class="clearfix colelem temp_no_id" data-orig-id="pu822362"><!-- group -->
+         <span class="nonblock nontext grpelem placeholder" data-placeholder-for="u822362_content"><!-- placeholder node --></span>
+         <span class="tclangbtn clearfix grpelem placeholder" data-placeholder-for="u822358-4_content"><!-- placeholder node --></span>
+         <span class="englangbtn clearfix grpelem placeholder" data-placeholder-for="u822367-4_content"><!-- placeholder node --></span>
+        </div>
+        <span class="clearfix colelem placeholder" data-placeholder-for="u822336-4_content"><!-- placeholder node --></span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- JS includes -->
+  <script type="text/javascript">
+   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
+</script>
+  <script type="text/javascript">
+   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js?crc=209076791" type="text/javascript">\x3C/script>');
+</script>
+  <!-- Other scripts -->
+  <script type="text/javascript">
+   // Decide whether to suppress missing file error or not based on preference setting
+var suppressMissingFileError = false
+</script>
+  <script type="text/javascript">
+   window.Muse.assets.check=function(c){if(!window.Muse.assets.checked){window.Muse.assets.checked=!0;var b={},d=function(a,b){if(window.getComputedStyle){var c=window.getComputedStyle(a,null);return c&&c.getPropertyValue(b)||c&&c[b]||""}if(document.documentElement.currentStyle)return(c=a.currentStyle)&&c[b]||a.style&&a.style[b]||"";return""},a=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),
+16);return 0},f=function(f){for(var g=document.getElementsByTagName("link"),j=0;j<g.length;j++)if("text/css"==g[j].type){var l=(g[j].href||"").match(/\/?css\/([\w\-]+\.css)\?crc=(\d+)/);if(!l||!l[1]||!l[2])break;b[l[1]]=l[2]}g=document.createElement("div");g.className="version";g.style.cssText="display:none; width:1px; height:1px;";document.getElementsByTagName("body")[0].appendChild(g);for(j=0;j<Muse.assets.required.length;){var l=Muse.assets.required[j],k=l.match(/([\w\-\.]+)\.(\w+)$/),i=k&&k[1]?
+k[1]:null,k=k&&k[2]?k[2]:null;switch(k.toLowerCase()){case "css":i=i.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");g.className+=" "+i;i=a(d(g,"color"));k=a(d(g,"backgroundColor"));i!=0||k!=0?(Muse.assets.required.splice(j,1),"undefined"!=typeof b[l]&&(i!=b[l]>>>24||k!=(b[l]&16777215))&&Muse.assets.outOfDate.push(l)):j++;g.className="version";break;case "js":j++;break;default:throw Error("Unsupported file type: "+k);}}c?c().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
+g.parentNode.removeChild(g);if(Muse.assets.outOfDate.length||Muse.assets.required.length)g="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",f&&Muse.assets.outOfDate.length&&(g+="\nOut of date: "+Muse.assets.outOfDate.join(",")),f&&Muse.assets.required.length&&(g+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(g+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(g)):alert(g)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
+setTimeout(function(){f(!0)},5E3):f()}};
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musepolyfill.bgsize","jquery.watch","jquery.musemenu","webpro","musewpdisclosure","musewpslideshow","jquery.museoverlay","touchswipe","jquery.museresponsive"],function(c){var $ = c;$(document).ready(function(){try{
+window.Muse.assets.check($);/* body */
+Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
+Muse.Utils.detectScreenResolution();/* HiDPI screens */
+Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
+Muse.Utils.resizeHeight('.popup_anchor.allow_click_through');/* resize height */
+Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
+Muse.Utils.initWidget('.MenuBar', ['#bp_infinity', '#bp_1280', '#bp_1025'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
+Muse.Utils.initWidget('#accordionu824093', ['#bp_769', '#bp_576'], function(elem) { return new WebPro.Widget.Accordion(elem, {canCloseAll:true,defaultIndex:-1}); });/* #accordionu824093 */
+Muse.Utils.initWidget('#pamphletu824088', ['#bp_769'], function(elem) { return new WebPro.Widget.ContentSlideShow(elem, {contentLayout_runtime:'lightbox',event:'click',deactivationEvent:'none',autoPlay:false,displayInterval:3000,transitionStyle:'fading',transitionDuration:500,hideAllContentsFirst:true,triggersOnTop:true,shuffle:false,enableSwipe:true,resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:false}); });/* #pamphletu824088 */
+Muse.Utils.initWidget('#pamphletu824088', ['#bp_576'], function(elem) { return new WebPro.Widget.ContentSlideShow(elem, {contentLayout_runtime:'lightbox',event:'click',deactivationEvent:'none',autoPlay:false,displayInterval:3000,transitionStyle:'fading',transitionDuration:500,hideAllContentsFirst:true,triggersOnTop:true,shuffle:false,enableSwipe:true,resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:true}); });/* #pamphletu824088 */
+Muse.Utils.fullPage('#page');/* 100% height page */
+$( '.breakpoint' ).registerBreakpoint();/* Register breakpoints */
+Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
+}catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
+
+</script>
+  <!-- RequireJS script -->
+  <script src="scripts/require.js?crc=4177726516" type="text/javascript" async data-main="scripts/museconfig.js?crc=3936894949" onload="if (requirejs) requirejs.onError = function(requireType, requireModule) { if (requireType && requireType.toString && requireType.toString().indexOf && 0 <= requireType.toString().indexOf('#scripterror')) window.Muse.assets.check(); }" onerror="window.Muse.assets.check();"></script>
+  
+  <!--HTML Widget code-->
+  
+			<script>
+        console.log("Fluid Scroll Effects Base (1.0.0)");
+      </script>
+		
+
+	<script>
+
+      var u833771_delay = 0;
+      u833771_delay = u833771_delay * 1000;
+
+      $(document).ready(function(){
+        u833771_animationClass();
+        u833771_viewPort();
+        u833771_setupMask();
+        
+        $(function() {
+          var $body = $(document);
+          $body.bind('scroll', function() {
+            if ($body.scrollLeft() !== 0) {
+              $body.scrollLeft(0);
+            }
+          });
+        }); 
+        
+      });
+
+      function u833771_setupMask(){
+        if('false' == 'true' ){
+          $('#page .xxxxxxxx').css("overflow", "hidden");
+        }
+      }
+
+      function u833771_animationClass(){
+        if( $('.' + 'fadein').hasClass != 'animated' ){
+          $('.' + 'fadein').addClass('animated');
+          $('.animated').css({
+            'opacity': 0
+          })
+          if('loopRepeat' == 'loopInfinite' ){
+            $('.' + 'fadein').addClass("infinite");
+          }
+        }
+        else{
+          return;
+        }
+      };
+
+      function u833771_viewPort(){
+        const $animation_elements = $('.' + 'fadein');
+        const $window = $(window);
+
+        $window.on('scroll resize', check_view);
+        $window.trigger('scroll');
+
+        function check_view(){
+          var windowHeight = $window.height();
+          var windowTopPosition = $window.scrollTop();
+          var windowBottomPosition = (windowHeight + windowTopPosition);
+
+          // Configure variables to get elements height + height from top of page.
+          $.each($animation_elements, function(){
+            var $element = $(this);
+            var elementHeight = $element.outerHeight();
+            var elementTopPosition = $element.offset().top;
+            var elementBottomPosition = (elementTopPosition + elementHeight);
+
+          // Check to see if current container is within viewport.
+          if ((elementTopPosition <= windowBottomPosition) &&
+          (elementBottomPosition >= windowTopPosition)){
+            setTimeout(function(){
+              $element.addClass('fadeInUp');
+              $element.css({'opacity': 1});
+              if( 'loopRepeat' == 'loopInfinite'){
+                $('.' + 'fadein').addClass('animation-direction');
+              }
+            }, u833771_delay);
+          } else if( 'loopRepeat' == 'loopRepeat' ){
+             $element.removeClass('fadeInUp');
+             $element.css({'opacity': 0});
+           };  
+        });
+        };
+      };
+
+    </script>
+		
+   </body>
+</html>
