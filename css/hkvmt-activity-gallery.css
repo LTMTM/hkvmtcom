@@ -204,6 +204,18 @@
     margin-left: auto;
     transform: none;
   }
+
+  /* Join the research wave to the green media section on small screens. */
+  .breakpoint.active #pu279930 {
+    margin-top: -1px !important;
+  }
+}
+
+@media (min-width: 1281px) {
+  /* The simplified-Chinese desktop export has the same gap. */
+  .breakpoint.active #pu851784 {
+    margin-top: -1px !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
