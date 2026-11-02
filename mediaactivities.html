@@ -188,21 +188,24 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 */
 -->
 <link data-hkvmt-gallery-stylesheet="true" href="css/hkvmt-activity-gallery.css?v=08a4a3fa2b1a" rel="stylesheet"/>
-<script data-hkvmt-breakpoints="true">
-/* Muse exports integer breakpoint ranges with gaps at fractional CSS widths.
- * Extend each upper bound to the next integer before Muse chooses a layout.
+<script data-hkvmt-breakpoints="true">/* Muse exports integer breakpoint ranges with gaps at fractional CSS widths.
+ * Extend each upper bound and keep the following lower bound exclusive.
  * Keep Muse's colour-coded breakpoint marker in sync with the HTML bounds.
  */
 (function () {
   'use strict';
   var upperBounds = { 576: 577, 769: 770, 1025: 1026, 1280: 1281, 827: 828 };
+  var lowerBounds = { 577: '577.02', 770: '770.02', 1026: '1026.02', 1281: '1281.02' };
   Array.prototype.forEach.call(document.styleSheets, function (sheet) {
     try {
       if (sheet.href && new URL(sheet.href, document.baseURI).origin !== location.origin) return;
       Array.prototype.forEach.call(sheet.cssRules, function (rule) {
         if (!rule.media) return;
         var media = rule.media.mediaText;
-        var continuous = media.replace(/(max-width:\s*)(576|769|1025|1280|827)(px)/g,
+        var continuous = media.replace(/(min-width:\s*)(577|770|1026|1281)(px)/g,
+          function (match, prefix, value, suffix) {
+            return prefix + lowerBounds[value] + suffix;
+          }).replace(/(max-width:\s*)(576|769|1025|1280|827)(px)/g,
           function (match, prefix, value, suffix) {
             if (rule.cssRules) {
               Array.prototype.forEach.call(rule.cssRules, function (child) {
@@ -220,10 +223,9 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
       // Cross-origin or unavailable stylesheets cannot be changed through CSSOM.
     }
   });
-}());
-</script></head>
+}());</script></head>
 <body>
-<div class="breakpoint active" data-min-width="1281" id="bp_infinity"><!-- responsive breakpoint node -->
+<div class="breakpoint active" data-min-width="1281.02" id="bp_infinity"><!-- responsive breakpoint node -->
 <div class="clearfix" id="page"><!-- group -->
 <div class="clearfix grpelem" id="pu729451"><!-- column -->
 <div class="size_fixed colelem shared_content" data-content-guid="u729451_content" id="u729451"><!-- custom html -->
@@ -780,7 +782,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/pullup_arrow_s.png?crc=349479707" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="1281" data-min-width="1026" id="bp_1280"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="1281" data-min-width="1026.02" id="bp_1280"><!-- responsive breakpoint node -->
 <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
 <div class="clearfix grpelem temp_no_id" data-orig-id="pu729451"><!-- column -->
 <span class="size_fixed colelem placeholder" data-placeholder-for="u729451_content"><!-- placeholder node --></span>
@@ -1124,7 +1126,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/pullup_arrow_s.png?crc=349479707" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="1026" data-min-width="770" id="bp_1025"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="1026" data-min-width="770.02" id="bp_1025"><!-- responsive breakpoint node -->
 <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
 <div class="clearfix grpelem temp_no_id" data-orig-id="pu729451"><!-- column -->
 <span class="size_fixed colelem placeholder" data-placeholder-for="u729451_content"><!-- placeholder node --></span>
@@ -1506,7 +1508,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/pullup_arrow_s.png?crc=349479707" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="770" data-min-width="577" id="bp_769"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="770" data-min-width="577.02" id="bp_769"><!-- responsive breakpoint node -->
 <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
 <div class="clearfix grpelem temp_no_id" data-orig-id="pu729451"><!-- column -->
 <span class="size_fixed colelem placeholder" data-placeholder-for="u729451_content"><!-- placeholder node --></span>
