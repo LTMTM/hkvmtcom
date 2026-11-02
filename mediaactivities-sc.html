@@ -187,7 +187,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 
 */
 -->
-<link data-hkvmt-gallery-stylesheet="true" href="css/hkvmt-activity-gallery.css?v=5d639cf9b626" rel="stylesheet"/>
+<link data-hkvmt-gallery-stylesheet="true" href="css/hkvmt-activity-gallery.css?v=08a4a3fa2b1a" rel="stylesheet"/>
 <script data-hkvmt-breakpoints="true">
 /* Muse exports integer breakpoint ranges with gaps at fractional CSS widths.
  * Extend each upper bound to the next integer before Muse chooses a layout.
@@ -2420,6 +2420,11 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
     var node = document.querySelector('.breakpoint.active [id="' + id + '"]');
     return node && node.closest('.breakpoint.active') && node.getClientRects().length ? node : null;
   }
+  function layoutBottom(node) {
+    var bottom = node.offsetHeight;
+    for (var current = node; current; current = current.offsetParent) bottom += current.offsetTop;
+    return bottom - window.scrollY;
+  }
   function outline(node, top, bottom) {
     if (!node) return;
     var r = node.getBoundingClientRect();
@@ -2454,7 +2459,7 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
       var h = heading.getBoundingClientRect();
       var last = active(ids[6]);
       var end = last && last.closest('.Button');
-      var bottom = end ? end.getBoundingClientRect().bottom : t.bottom - 20;
+      var bottom = end ? layoutBottom(end) : t.bottom - 20;
       var originalTop = h.top - (parseFloat(heading.dataset.outlineShift) || 0);
       var shift = Math.max(0, bottom + 60 - originalTop);
       heading.style.translate = '0 ' + shift + 'px';
@@ -2496,6 +2501,7 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
   }
   window.addEventListener('resize', schedule);
   window.addEventListener('load', schedule);
+  if (window.jQuery) window.jQuery(document.body).on('muse_bp_activate', update);
   new MutationObserver(schedule).observe(document.body, {
     attributes:true, attributeFilter:['class'], childList:true, subtree:true
   });

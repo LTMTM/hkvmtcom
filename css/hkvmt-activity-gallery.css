@@ -250,6 +250,10 @@
   height: var(--content-spacer) !important;
   min-height: var(--content-spacer) !important;
 }
+/* Keep the final lecture status in place while its opacity fades in. */
+#buttonu626180, #buttonu805508, #buttonu850652 {
+  transform: none !important;
+}
 @media (max-width: 600px) {
   .breakpoint.active .backtotop,
   .breakpoint.active .pulldown {
