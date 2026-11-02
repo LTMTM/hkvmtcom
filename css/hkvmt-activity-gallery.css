@@ -236,25 +236,20 @@
 @media (max-width: 600px) {
   .breakpoint.active .backtotop,
   .breakpoint.active .pulldown {
-    width: 44px !important;
-    height: 44px !important;
+    width: 40px !important;
+    height: 132px !important;
     right: 8px !important;
     left: auto !important;
     top: auto !important;
     bottom: 12px !important;
     margin: 0 !important;
-    border-radius: 8px;
-    background: #666 !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
   }
-  .breakpoint.active .backtotop::after,
-  .breakpoint.active .pulldown::after {
-    content: "↑";
-    display: block;
-    color: white;
-    font: 30px/44px sans-serif;
-    text-align: center;
+  .breakpoint.active .pulldown {
+    pointer-events: none;
   }
-  .breakpoint.active .pulldown::after { content: "↓"; }
 }
 
 /* At the narrow edge of Muse's desktop menu the language tab was off-screen.
