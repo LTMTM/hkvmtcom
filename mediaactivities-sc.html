@@ -2488,8 +2488,11 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
   }
   var pending;
   function schedule() {
-    clearTimeout(pending);
-    pending = setTimeout(function () { requestAnimationFrame(update); }, 100);
+    if (pending) return;
+    pending = requestAnimationFrame(function () {
+      pending = null;
+      update();
+    });
   }
   window.addEventListener('resize', schedule);
   window.addEventListener('load', schedule);
@@ -2502,6 +2505,5 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
     document.querySelectorAll('.hkvmt-gallery-root').forEach(function (node) { resizeObserver.observe(node); });
   }
   schedule();
-}());
-</script></body>
+}());</script></body>
 </html>
