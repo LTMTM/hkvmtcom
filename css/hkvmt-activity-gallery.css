@@ -211,3 +211,64 @@
     transition: none;
   }
 }
+
+/* Empty Muse decoration floats retain their layout dimensions; the visible
+   outline follows section headings and stays inside narrow viewports. */
+.hkvmt-section-outline {
+  border-color: transparent !important;
+}
+.hkvmt-section-outline::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  left: var(--outline-left);
+  top: var(--outline-top);
+  width: var(--outline-width);
+  height: var(--outline-height);
+  border: 3px solid var(--outline-color);
+  border-radius: inherit;
+}
+.hkvmt-page-spacer {
+  height: var(--content-spacer) !important;
+  min-height: var(--content-spacer) !important;
+}
+@media (max-width: 600px) {
+  .breakpoint.active .backtotop,
+  .breakpoint.active .pulldown {
+    width: 44px !important;
+    height: 44px !important;
+    right: 8px !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+    border-radius: 8px;
+    background: #666 !important;
+  }
+  .breakpoint.active .backtotop::after,
+  .breakpoint.active .pulldown::after {
+    content: "↑";
+    display: block;
+    color: white;
+    font: 30px/44px sans-serif;
+    text-align: center;
+  }
+  .breakpoint.active .pulldown::after { content: "↓"; }
+}
+
+/* At the narrow edge of Muse's desktop menu the language tab was off-screen.
+   Keep it immediately below the menu, clear of its last navigation item. */
+@media (min-width: 770px) and (max-width: 827px) {
+  #u722522-4, #u722523-4, #u770047-4, #u770048-4,
+  #u824085-4, #u824156-4 {
+    left: auto !important;
+    right: 8px !important;
+    margin-left: 0 !important;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px #0002;
+  }
+  #u722523-4, #u770048-4, #u824156-4 { top: 92px !important; }
+  #u722522-4, #u770047-4, #u824085-4 { top: 122px !important; }
+}
