@@ -169,6 +169,11 @@
   .hkvmt-gallery-root {
     margin-left: 385px;
   }
+
+  /* In this Muse layout the wave image sits below the media section. */
+  #bp_769.active #u406680 {
+    background-position: center calc(100% - 596px) !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -213,7 +218,7 @@
 
 @media (min-width: 1281px) {
   /* The simplified-Chinese desktop export has the same gap. */
-  .breakpoint.active #pu851784 {
+  #bp_infinity.active #pu851784 {
     margin-top: -1px !important;
   }
 }

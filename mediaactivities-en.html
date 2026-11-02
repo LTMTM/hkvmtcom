@@ -187,7 +187,41 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 
 */
 -->
-<link data-hkvmt-gallery-stylesheet="true" href="css/hkvmt-activity-gallery.css?v=871b438af542" rel="stylesheet"/></head>
+<link data-hkvmt-gallery-stylesheet="true" href="css/hkvmt-activity-gallery.css?v=5d639cf9b626" rel="stylesheet"/>
+<script data-hkvmt-breakpoints="true">
+/* Muse exports integer breakpoint ranges with gaps at fractional CSS widths.
+ * Extend each upper bound to the next integer before Muse chooses a layout.
+ * Keep Muse's colour-coded breakpoint marker in sync with the HTML bounds.
+ */
+(function () {
+  'use strict';
+  var upperBounds = { 576: 577, 769: 770, 1025: 1026, 1280: 1281, 827: 828 };
+  Array.prototype.forEach.call(document.styleSheets, function (sheet) {
+    try {
+      if (sheet.href && new URL(sheet.href, document.baseURI).origin !== location.origin) return;
+      Array.prototype.forEach.call(sheet.cssRules, function (rule) {
+        if (!rule.media) return;
+        var media = rule.media.mediaText;
+        var continuous = media.replace(/(max-width:\s*)(576|769|1025|1280|827)(px)/g,
+          function (match, prefix, value, suffix) {
+            if (rule.cssRules) {
+              Array.prototype.forEach.call(rule.cssRules, function (child) {
+                if (child.selectorText === '#muse_css_mq') {
+                  child.style.backgroundColor = '#' +
+                    ('000000' + upperBounds[value].toString(16)).slice(-6);
+                }
+              });
+            }
+            return prefix + upperBounds[value] + suffix;
+          });
+        if (continuous !== media) rule.media.mediaText = continuous;
+      });
+    } catch (error) {
+      // Cross-origin or unavailable stylesheets cannot be changed through CSSOM.
+    }
+  });
+}());
+</script></head>
 <body>
 <div class="breakpoint active" data-min-width="1281" id="bp_infinity"><!-- responsive breakpoint node -->
 <div class="clearfix" id="page"><!-- group -->
@@ -743,7 +777,7 @@ Inside and Out</div>
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/pullup_arrow_s_eng.png?crc=89892497" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="1280" data-min-width="1026" id="bp_1280"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="1281" data-min-width="1026" id="bp_1280"><!-- responsive breakpoint node -->
 <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
 <span class="clearfix grpelem placeholder" data-placeholder-for="pu769804_content"><!-- placeholder node --></span>
 <div class="clearfix grpelem temp_no_id" data-orig-id="ptalks"><!-- column -->
@@ -1097,7 +1131,7 @@ Inside and Out</div>
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/pullup_arrow_s_eng.png?crc=89892497" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="1025" data-min-width="770" id="bp_1025"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="1026" data-min-width="770" id="bp_1025"><!-- responsive breakpoint node -->
 <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
 <span class="clearfix grpelem placeholder" data-placeholder-for="pu769804_content"><!-- placeholder node --></span>
 <div class="browser_width" id="u687189-bw">
@@ -1449,7 +1483,7 @@ Inside and Out</div>
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/pullup_arrow_s_eng.png?crc=89892497" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="769" data-min-width="577" id="bp_769"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="770" data-min-width="577" id="bp_769"><!-- responsive breakpoint node -->
 <div class="clearfix temp_no_id" data-orig-id="page"><!-- group -->
 <span class="clearfix grpelem placeholder" data-placeholder-for="pu769804_content"><!-- placeholder node --></span>
 <div class="clearfix grpelem" id="pu687190"><!-- group -->
@@ -1803,7 +1837,7 @@ Inside and Out</div>
 <img alt="" class="preload temp_no_img_src" data-orig-src="images/facebook.png?crc=407095473" src="images/blank.gif?crc=4208392903"/>
 </div>
 </div>
-<div class="breakpoint" data-max-width="576" id="bp_576"><!-- responsive breakpoint node -->
+<div class="breakpoint" data-max-width="577" id="bp_576"><!-- responsive breakpoint node -->
 <div class="clearfix borderbox temp_no_id" data-orig-id="page"><!-- group -->
 <div class="clearfix grpelem temp_no_id" data-orig-id="pu769804"><!-- column -->
 <span class="size_fixed colelem placeholder" data-placeholder-for="u769804_content"><!-- placeholder node --></span>
