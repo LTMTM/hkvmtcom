@@ -29,6 +29,15 @@
       }
     }
     document.documentElement.classList.toggle('hkvmt-control-obscures', !!blocked);
+
+    // The decorative down arrow should not cover the news panel on phones.
+    var down = active && active.querySelector('.pulldown');
+    var news = active && active.querySelector('.stickright');
+    if (down) {
+      down.style.visibility = window.innerWidth <= 600 &&
+        overlaps(down.getBoundingClientRect(), news && news.getBoundingClientRect())
+        ? 'hidden' : '';
+    }
   }
 
   function schedule() {
