@@ -74,3 +74,45 @@
     initialize();
   }
 }());
+
+/* Re-measure the news carousel after its fonts or Muse breakpoint settle. */
+(function () {
+  'use strict';
+  if (!document.querySelector('.stickright .my-slider')) return;
+  var pending = false;
+  var activeBreakpoint = '';
+  function refresh() {
+    if (pending) return;
+    pending = true;
+    window.requestAnimationFrame(function () {
+      pending = false;
+      var slider = document.querySelector('.breakpoint.active .stickright .my-slider.tns-vertical');
+      if (slider && slider.getBoundingClientRect().width > 0) {
+        window.dispatchEvent(new Event('resize'));
+      }
+    });
+  }
+  function breakpointChanged() {
+    var node = document.querySelector('.breakpoint.active');
+    var name = node ? node.id : '';
+    if (name !== activeBreakpoint) {
+      activeBreakpoint = name;
+      refresh();
+    }
+  }
+  if (window.MutationObserver) {
+    var observer = new MutationObserver(breakpointChanged);
+    Array.prototype.forEach.call(document.querySelectorAll('.breakpoint'), function (node) {
+      observer.observe(node, { attributes: true, attributeFilter: ['class'] });
+    });
+  }
+  breakpointChanged();
+  var stylesheet = document.querySelector('link[href*="hkvmt-responsive-repairs.css"]');
+  if (stylesheet) {
+    if (stylesheet.sheet) refresh();
+    else stylesheet.addEventListener('load', refresh, { once: true });
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+  if (document.readyState === 'complete') refresh();
+  else window.addEventListener('load', refresh, { once: true });
+}());

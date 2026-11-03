@@ -48,11 +48,11 @@
 
   var style = document.createElement('link');
   style.rel = 'stylesheet';
-  style.href = 'css/hkvmt-responsive-repairs.css?v=20261103a';
+  style.href = 'css/hkvmt-responsive-repairs.css?v=20261103b';
   document.head.appendChild(style);
 
   var script = document.createElement('script');
-  script.src = 'scripts/hkvmt-responsive-repairs.js?v=20261103a';
+  script.src = 'scripts/hkvmt-responsive-repairs.js?v=20261103b';
   script.async = false;
   document.head.appendChild(script);
 }());

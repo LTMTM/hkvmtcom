@@ -119,3 +119,20 @@
     transform: translateX(-15px);
   }
 }
+
+/* Keep each news thumbnail beside its text, including long titles. */
+.stickright .sliderblock > a {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.stickright .sliderblock .sliderimg {
+  flex: 0 0 auto;
+}
+.stickright .sliderblock .slidertext {
+  display: block;
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
