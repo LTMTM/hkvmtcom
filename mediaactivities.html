@@ -2358,8 +2358,12 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
         const $animation_elements = $('.' + 'fadein');
         const $window = $(window);
 
-        $window.on('scroll resize', check_view);
+        $window.on('scroll resize hashchange load', check_view);
         $window.trigger('scroll');
+        // Recheck after the browser positions a direct link to a section.
+        if (window.location.hash) {
+          requestAnimationFrame(function () { requestAnimationFrame(check_view); });
+        }
 
         function check_view(){
           var windowHeight = $window.height();
