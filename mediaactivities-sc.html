@@ -193,6 +193,11 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 #bp_769.active #ptalks {
   height: auto !important;
 }
+/* Keep the media heading above its outline at desktop breakpoints. */
+#bp_1280.active #u851784,
+#bp_infinity.active #u851784 {
+  z-index: auto !important;
+}
 </style>
 <script data-hkvmt-breakpoints="true">/* Muse exports integer breakpoint ranges with gaps at fractional CSS widths.
  * Extend each upper bound and keep the following lower bound exclusive.
