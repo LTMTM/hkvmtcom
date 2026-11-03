@@ -1,3 +1,62 @@
+/* Apply the responsive repair before Muse registers its breakpoint nodes. */
+(function () {
+  'use strict';
+  if (window.__hkvmtResponsiveBooted) return;
+  window.__hkvmtResponsiveBooted = true;
+
+  var upper = { 576: 577, 769: 770, 1025: 1026, 1280: 1281, 827: 828 };
+  var lower = { 577: '577.02', 770: '770.02', 1026: '1026.02', 1281: '1281.02' };
+  var alreadyRepaired = document.querySelector('script[data-hkvmt-breakpoints]');
+
+  function repairNodes() {
+    if (alreadyRepaired) return;
+    Array.prototype.forEach.call(document.querySelectorAll('.breakpoint'), function (node) {
+      var min = node.getAttribute('data-min-width');
+      var max = node.getAttribute('data-max-width');
+      if (lower[min]) node.setAttribute('data-min-width', lower[min]);
+      if (upper[max]) node.setAttribute('data-max-width', upper[max]);
+    });
+  }
+
+  if (!alreadyRepaired) {
+    Array.prototype.forEach.call(document.styleSheets, function (sheet) {
+      try {
+        if (sheet.href && new URL(sheet.href, document.baseURI).origin !== location.origin) return;
+        Array.prototype.forEach.call(sheet.cssRules, function (rule) {
+          if (!rule.media) return;
+          var media = rule.media.mediaText;
+          var continuous = media.replace(/(min-width:\s*)(577|770|1026|1281)(px)/g,
+            function (match, prefix, value, suffix) { return prefix + lower[value] + suffix; })
+            .replace(/(max-width:\s*)(576|769|1025|1280|827)(px)/g,
+              function (match, prefix, value, suffix) {
+                if (rule.cssRules) Array.prototype.forEach.call(rule.cssRules, function (child) {
+                  if (child.selectorText === '#muse_css_mq') {
+                    child.style.backgroundColor = '#' + ('000000' + upper[value].toString(16)).slice(-6);
+                  }
+                });
+                return prefix + upper[value] + suffix;
+              });
+          if (continuous !== media) rule.media.mediaText = continuous;
+        });
+      } catch (error) {
+        // Stylesheets on other origins cannot be accessed through CSSOM.
+      }
+    });
+    repairNodes();
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', repairNodes);
+  }
+
+  var style = document.createElement('link');
+  style.rel = 'stylesheet';
+  style.href = 'css/hkvmt-responsive-repairs.css?v=20261103a';
+  document.head.appendChild(style);
+
+  var script = document.createElement('script');
+  script.src = 'scripts/hkvmt-responsive-repairs.js?v=20261103a';
+  script.async = false;
+  document.head.appendChild(script);
+}());
+
 /*
  Copyright 2011-2016 Adobe Systems Incorporated. All Rights Reserved.
 */

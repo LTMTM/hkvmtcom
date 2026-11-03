@@ -19,6 +19,15 @@
       overlaps(buttonRect, footer && footer.getBoundingClientRect()) ||
       overlaps(buttonRect, table && table.getBoundingClientRect())
     );
+    if (buttonRect && !blocked && active) {
+      var artwork = active.querySelectorAll('a, p, img, .shadow.museBGSize, .hkvmt-gallery-card');
+      for (var i = 0; i < artwork.length; i++) {
+        if (overlaps(buttonRect, artwork[i].getBoundingClientRect())) {
+          blocked = true;
+          break;
+        }
+      }
+    }
     document.documentElement.classList.toggle('hkvmt-control-obscures', !!blocked);
   }
 
@@ -45,6 +54,15 @@
       link.setAttribute('href', link.getAttribute('href').replace('mediaactivities-en.htmll#', 'mediaactivities-en.html#'));
     });
     schedule();
+    if (window.MutationObserver) {
+      var observer = new MutationObserver(schedule);
+      Array.prototype.forEach.call(document.querySelectorAll('.breakpoint'), function (node) {
+        observer.observe(node, { attributes: true, attributeFilter: ['class'] });
+      });
+    }
+    // Muse switches breakpoints and rebuilds the news slider after load.
+    window.setTimeout(schedule, 200);
+    window.setTimeout(schedule, 1800);
   }
 
   window.addEventListener('scroll', schedule, { passive: true });
