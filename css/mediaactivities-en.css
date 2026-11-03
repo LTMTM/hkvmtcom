@@ -9,3 +9,6 @@
 #bp_infinity.active #buttonu805600 #u805601-6 { margin-top: 11px !important; }
 #bp_1280.active #buttonu805526 { margin-top: 3283px !important; }
 #bp_infinity.active #buttonu805526 { margin-top: 3449px !important; }
+
+/* HKVMT 2023 lecture notice spacing: keep the notice clear of the poster. */
+#bp_1280.active #u805507-4 { transform: translateY(35px); }
