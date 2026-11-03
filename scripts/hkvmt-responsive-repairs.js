@@ -69,9 +69,30 @@
     });
   }
 
+  function keepHomepageWordsTogether() {
+    Array.prototype.forEach.call(document.querySelectorAll('#u815320 .bouncingtext .letters'), function (text) {
+      var word = null;
+      Array.prototype.slice.call(text.childNodes).forEach(function (node) {
+        if (node.nodeType === 1 && node.classList.contains('letter')) {
+          if (!word) {
+            word = document.createElement('span');
+            word.className = 'hkvmt-word';
+            word.style.display = 'inline-block';
+            word.style.whiteSpace = 'nowrap';
+            text.insertBefore(word, node);
+          }
+          word.appendChild(node);
+        } else {
+          word = null;
+        }
+      });
+    });
+  }
+
   function initialize() {
     prepareComparisonTable();
     updateAssessmentLinks();
+    keepHomepageWordsTogether();
     Array.prototype.forEach.call(document.querySelectorAll('a[href*="mediaactivities-en.htmll#"]'), function (link) {
       link.setAttribute('href', link.getAttribute('href').replace('mediaactivities-en.htmll#', 'mediaactivities-en.html#'));
     });
@@ -79,6 +100,7 @@
     if (window.MutationObserver) {
       var observer = new MutationObserver(function () {
         updateAssessmentLinks();
+        keepHomepageWordsTogether();
         schedule();
       });
       Array.prototype.forEach.call(document.querySelectorAll('.breakpoint'), function (node) {
