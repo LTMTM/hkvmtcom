@@ -288,3 +288,18 @@
   #u722523-4, #u770048-4, #u824156-4 { top: 92px !important; }
   #u722522-4, #u770047-4, #u824085-4 { top: 122px !important; }
 }
+
+
+/* HKVMT sharp research posters: keep the existing fade without enlarging the small rollover images. */
+#u627196, #u805559, #u850655 {
+  background-image: url("../images/poster%20rlif_2x.jpg") !important;
+}
+#u648127, #u851881, #u850663 {
+  background-image: url("../images/poster%20bworklife_2x.jpg") !important;
+}
+#u627196:hover, #u805559:hover, #u850655:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), url("../images/poster%20rlif_2x.jpg") !important;
+}
+#u648127:hover, #u851881:hover, #u850663:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1)), url("../images/poster%20bworklife_2x.jpg") !important;
+}
