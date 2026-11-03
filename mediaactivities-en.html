@@ -188,6 +188,13 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
 */
 -->
 <link data-hkvmt-gallery-stylesheet="true" href="css/hkvmt-activity-gallery.css?v=774975db9d18" rel="stylesheet"/>
+<style>
+/* Keep the media heading above its outline at desktop breakpoints. */
+#bp_1280.active #u805444,
+#bp_infinity.active #u805444 {
+  z-index: auto !important;
+}
+</style>
 <script data-hkvmt-breakpoints="true">/* Muse exports integer breakpoint ranges with gaps at fractional CSS widths.
  * Extend each upper bound and keep the following lower bound exclusive.
  * Keep Muse's colour-coded breakpoint marker in sync with the HTML bounds.
