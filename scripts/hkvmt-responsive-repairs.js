@@ -57,14 +57,30 @@
     }
   }
 
+  function updateAssessmentLinks() {
+    var destinations = {
+      'https://hkbu.questionpro.com/UserEntrance': 'https://hkbuchtl.qualtrics.com/jfe/form/SV_40n3q7cpgomFK98',
+      'https://hkbu.questionpro.com/CARSTest': 'https://hkbuchtl.qualtrics.com/jfe/form/SV_eg4tImyNs7lmPae',
+      'https://hkbu.questionpro.com/hkvmt-desktop': 'https://hkbuchtl.qualtrics.com/jfe/form/SV_bdDqF1BGRvpCPci'
+    };
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="hkbu.questionpro.com/"]'), function (link) {
+      var replacement = destinations[link.getAttribute('href')];
+      if (replacement) link.setAttribute('href', replacement);
+    });
+  }
+
   function initialize() {
     prepareComparisonTable();
+    updateAssessmentLinks();
     Array.prototype.forEach.call(document.querySelectorAll('a[href*="mediaactivities-en.htmll#"]'), function (link) {
       link.setAttribute('href', link.getAttribute('href').replace('mediaactivities-en.htmll#', 'mediaactivities-en.html#'));
     });
     schedule();
     if (window.MutationObserver) {
-      var observer = new MutationObserver(schedule);
+      var observer = new MutationObserver(function () {
+        updateAssessmentLinks();
+        schedule();
+      });
       Array.prototype.forEach.call(document.querySelectorAll('.breakpoint'), function (node) {
         observer.observe(node, { attributes: true, attributeFilter: ['class'] });
       });
