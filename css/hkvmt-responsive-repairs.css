@@ -1,6 +1,21 @@
 /* Small repairs to the existing Muse layouts; the site's colours and artwork
    remain in the exported stylesheets. */
 
+/* Extend the white area below the homepage wave so the green background
+   cannot show as a detached stripe before the team section. */
+#u583730::after,
+#u780839::after,
+#u826707::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  background: #fff;
+  pointer-events: none;
+}
+
 /* The desktop language links otherwise fall outside the narrowest layout. */
 @media (min-width: 770.02px) and (max-width: 828px) {
   #u722522-4, #u722523-4, #u770047-4, #u770048-4,
@@ -54,7 +69,8 @@
 
 /* Move the floating control out of the way when it would cover a table or
    footer. The graphic and its normal behaviour are unchanged elsewhere. */
-.hkvmt-control-obscures .breakpoint.active .backtotop {
+.hkvmt-control-obscures .breakpoint.active .backtotop,
+.hkvmt-control-obscures .breakpoint.active .pulldown {
   visibility: hidden !important;
 }
 

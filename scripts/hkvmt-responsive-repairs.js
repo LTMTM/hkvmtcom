@@ -69,6 +69,20 @@
     });
   }
 
+  function useLocalHomepageImages() {
+    Array.prototype.forEach.call(document.querySelectorAll('img[src^="https://hkvmt.com/"], img[src^="https://www.hkvmt.com/"]'), function (image) {
+      var source = image.getAttribute('src').trim();
+      var match = source.match(/^https:\/\/(?:www\.)?hkvmt\.com\/((?:assets|images)\/.*)$/i);
+      if (match) image.setAttribute('src', match[1]);
+    });
+  }
+
+  function fixEnglishActivityLinks() {
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="mediaactivities-en.htmll"]'), function (link) {
+      link.setAttribute('href', link.getAttribute('href').replace('mediaactivities-en.htmll', 'mediaactivities-en.html'));
+    });
+  }
+
   function keepHomepageWordsTogether() {
     Array.prototype.forEach.call(document.querySelectorAll('#u815320 .bouncingtext .letters'), function (text) {
       var word = null;
@@ -92,14 +106,15 @@
   function initialize() {
     prepareComparisonTable();
     updateAssessmentLinks();
+    useLocalHomepageImages();
+    fixEnglishActivityLinks();
     keepHomepageWordsTogether();
-    Array.prototype.forEach.call(document.querySelectorAll('a[href*="mediaactivities-en.htmll#"]'), function (link) {
-      link.setAttribute('href', link.getAttribute('href').replace('mediaactivities-en.htmll#', 'mediaactivities-en.html#'));
-    });
     schedule();
     if (window.MutationObserver) {
       var observer = new MutationObserver(function () {
         updateAssessmentLinks();
+        useLocalHomepageImages();
+        fixEnglishActivityLinks();
         keepHomepageWordsTogether();
         schedule();
       });
